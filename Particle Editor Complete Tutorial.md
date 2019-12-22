@@ -10,10 +10,10 @@ Here you will learn the basics to understand the tool, as well as advanced techn
 <h2 id="contents">Contents</h2>
 <ul>
 <li><a href="#Tool">The Tool</a></li>
-<li><a href="#Functions">Functions</a></li>
+<li><a href="#Functions-1">Functions</a></li>
 </ul>
 <p><a></a></p>
-<h2 id="the-tool">The Tool</h2>
+<h2 id="tool">Tool</h2>
 <p>There are two ways to open the Particle Editor: The first is to click on the flame symbol on the top left of the main asset browser window to open a blank new window. The second way is to directly open an existing particle effect by double clicking it in the asset browser.</p>
 <p>Now open an existing particle effect as an example:</p>
 <h3 id="menu">Menu</h3>
@@ -32,7 +32,7 @@ Most important is the first item <code>Visualize Attributes</code> which allows 
 <p>The functions are the heart of every particle effect. Here you can define all properties and behaviors that make the effect what it is. In the upper part, there are also 4 small buttons that make navigation much easier.</p>
 <p><img src="https://i.imgur.com/XppFQIR.png" alt="alt text"></p>
 <p>If you have more than one effect open at the same time in the particle editor, you can jump to the last displayed effect with the left arrow. Likewise, the arrow to the right leads to the next effect. The button to the right is either grayed out and shows a P or a number. If the current effect is added to another effect as a child you can use it to display a list of these effects and jump to them. Vice versa the button next to it with a number or a capital C. This shows subordinate effects in a tree structure. If these two buttons are not clickable, it means that there are no effects available at the moment.<br>
-More about the functions in detail here: <a href="#Functions">Functions</a>.</p>
+More about the functions in detail here: <a href="#Functions-1">Functions</a>.</p>
 <h3 id="properties">Properties</h3>
 <p>The detailed data for the currently selected function is displayed here. If you want to make changes to one of the functions, this is the right place to do so.</p>
 <h3 id="controls">Controls</h3>
@@ -60,5 +60,5 @@ To add a function to one of these groups, just click the plus icon and choose an
 </ul>
 <h3 id="initializer">Initializer</h3>
 <p><a></a></p>
-<h2 id="library---coming-soon">Library - Coming Soon!</h2>
+<h2 id="library">Library</h2>
 
