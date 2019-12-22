@@ -6,9 +6,9 @@ Here you will learn the basics to understand the tool, as well as advanced techn
 
 ## How to get started?
 This project should help you find your way into the world of particle effects. Several documents are available for this purpose:
-- The [Particle Editor Guide](#Guide), which contains detailed information about all possible areas of the Particle Editor and can thus be used both as an introduction and as a reference manual.
-- The [Tutorials Page](#Tutorials), a collection of step-by-step tutorials for complete beginners as well as some more in-depth and complex problems.
-- The [Functions Library](#Library), a collection of all knows functions with their usage and other useful information.
+- The [Particle Editor Guide](https://github.com/Nibuja05/dota_particle_editor_tutorial/blob/master/Particle%20Editor%20Guide.md), which contains detailed information about all possible areas of the Particle Editor and can thus be used both as an introduction and as a reference manual.
+- The [Tutorials Page](https://github.com/Nibuja05/dota_particle_editor_tutorial/blob/master/Tutorials.md), a collection of step-by-step tutorials for complete beginners as well as some more in-depth and complex problems.
+- The [Function Library](https://github.com/Nibuja05/dota_particle_editor_tutorial/blob/master/Function%20Library.md), a collection of all knows functions with their usage and other useful information.
 
 If you're completely new to this topic, it would be recommended to start reading the Particle Editor Guides topics `The Tool` and `Functions`. After that follow some basic tutorials from the Tutorials Page
 
