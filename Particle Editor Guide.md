@@ -68,5 +68,4 @@ To add a function to one of these groups, just click the plus icon and choose an
 <li><code>Emit instantaneously</code> - emits <code>num to emit</code> particles directly at the start of the effect all at once. The emission can be delayed with <code>emission start time</code>. (<a href="#Library">Library</a>)</li>
 </ul>
 <h3 id="initializer">Initializer</h3>
-<h2 id="library">Library</h2>
 
