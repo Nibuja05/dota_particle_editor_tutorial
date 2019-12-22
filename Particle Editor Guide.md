@@ -4,7 +4,6 @@
 ---
 
 <h1 id="particle-editor-guide">Particle Editor Guide</h1>
-<p>In this file</p>
 <h2 id="contents">Contents</h2>
 <ul>
 <li><a href="#the-tool">The Tool</a>
