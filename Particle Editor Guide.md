@@ -3,6 +3,7 @@
 
 ---
 
+<p>back to the <a href="./README.md">Overview</a>.</p>
 <h1 id="particle-editor-guide">Particle Editor Guide</h1>
 <h2 id="contents">Contents</h2>
 <ul>
@@ -32,7 +33,7 @@ Important note here: In order to modify valves particles you need to save it in 
 <h3 id="preview">Preview</h3>
 <p>The biggest part of your window should be filled with a preview part in the middle. There you can already see how the effect will eventually look like in the game. You can move freely with WASD, the right mouse button and the mouse wheel to see the effect from any side and distance. In the top left are two lines of text that display statistics of the number of particles.<br>
 The icons in the top bar mainly handle the playback of the effect in the preview window. Here you can stop the simulation, restart it, etc.<br>
-<img src="https://i.imgur.com/ktpuMb6.png" alt="alt text"><br>
+<img src="https://i.imgur.com/ktpuMb6.png" alt=""><br>
 To the right there are two more buttons that can be used to reset the camera, e.g. if you have navigated the camera unfavorably.<br>
 <img src="https://i.imgur.com/jMP5TY3.png" alt="alt text"><br>
 The last button in the row is the most important one: Visualize allows you to graphically display various, otherwise invisible, attributes. It opens a small extra window where you can choose what you want to display.<br>
@@ -50,7 +51,7 @@ More about the functions in detail here: <a href="#Functions-1">Functions</a>.</
 <img src="https://i.imgur.com/1OU3mSS.png" alt="alt text"><br>
 By clicking on the colored icon to the right of the arrow, you can directly influence these points, for example by moving or rotating them. Alternatively you can also enter your desired values in the fields next to it. On the far right you will find a small lock symbol. If it is closed, the entered values are saved, so that the next time you open this effect in the Particle Editor, the values are immediately restored to the saved values. With the preview part below, other assets like models can be loaded directly into the current effect. This is only a test tool and has no influence on the final result displayed in the game. Nevertheless, it is essential for quick testing of different effects.</p>
 <h2 id="functions-1">Functions</h2>
-<p>Now that you have learned the general handling of the tool, we can start to take a closer look at the functions that make every effect work. Functions are divided into different groups, that will be explained here. You can find a complete list of all functions with their usage here: <a href="#Library">Functions Library</a><br>
+<p>Now that you have learned the general handling of the tool, we can start to take a closer look at the functions that make every effect work. Functions are divided into different groups, that will be explained here. You can find a complete list of all functions with their usage here: <a href="./Function%20Library.md">Functions Library</a><br>
 To add a function to one of these groups, just click the plus icon and choose an element from the list.</p>
 <h3 id="base-properties">Base Properties</h3>
 <p>The base properties hold every information about the effect, including all other groups. In addition, both initial and other important values can be found here. Some initial values that can be set here are:</p>
@@ -64,8 +65,8 @@ To add a function to one of these groups, just click the plus icon and choose an
 <h3 id="emitter">Emitter</h3>
 <p>Emitters are functions that can generate particles. They can therefore be found in almost every effect. Normally it is sufficient to use a kind of emitter. The most commonly used emitters among them are:</p>
 <ul>
-<li><code>Emit continuously</code> - emits particles in a set interval. <code>emission rate</code> is the count of particles emitted per second, <code>emission duration</code> is the duration in which particles are emitted and <code>emission start time</code> is a delay to the start of the emission in seconds. (<a href="#Library">Library</a>)</li>
-<li><code>Emit instantaneously</code> - emits <code>num to emit</code> particles directly at the start of the effect all at once. The emission can be delayed with <code>emission start time</code>. (<a href="#Library">Library</a>)</li>
+<li><code>Emit continuously</code> - emits particles in a set interval. <code>emission rate</code> is the count of particles emitted per second, <code>emission duration</code> is the duration in which particles are emitted and <code>emission start time</code> is a delay to the start of the emission in seconds. (<a href="./Function%20Library.md#emit-continuously">Library</a>)</li>
+<li><code>Emit instantaneously</code> - emits <code>num to emit</code> particles directly at the start of the effect all at once. The emission can be delayed with <code>emission start time</code>. (<a href="./Function%20Library.md#emit-instantaniously">Library</a>)</li>
 </ul>
 <h3 id="initializer">Initializer</h3>
 
