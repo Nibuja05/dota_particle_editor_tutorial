@@ -65,7 +65,7 @@
 <li><a href="#rotate-vector-random">Rotate vector random</a></li>
 <li><a href="#movement-lerp-to-hitbox">Movement lerp to hitbox</a></li>
 <li><a href="#remap-control-point-direction-to-vector">Remap control point direction to vector</a></li>
-<li><a href="#rotaton-orient-to-2d-direction">Rotaton orient to 2d direction</a></li>
+<li><a href="#rotation-orient-to-2d-direction">Rotation orient to 2d direction</a></li>
 <li><a href="#color-fade-random">Color fade random</a></li>
 <li><a href="#remap-scalar">Remap scalar</a></li>
 <li><a href="#color-light-from-control-point">Color light from control point</a></li>
@@ -118,14 +118,14 @@
 <ul>
 <li><a href="#lifetime-random">Lifetime random</a></li>
 <li><a href="#radius-random">Radius Random</a></li>
-<li><a href="#rotaton-random">Rotaton random</a></li>
+<li><a href="#rotation-random">Rotation random</a></li>
 <li><a href="#color-random">Color Random</a></li>
 <li><a href="#position-within-sphere-random">Position within sphere random</a></li>
 <li><a href="#alpha-random">Alpha Random</a></li>
 <li><a href="#position-modify-offset-random">Position modify offset random</a></li>
 <li><a href="#sequence-random">Sequence Random</a></li>
 <li><a href="#velocity-noise">Velocity noise</a></li>
-<li><a href="#rotaton-yaw-flip-random">Rotaton yaw flip random</a></li>
+<li><a href="#rotation-yaw-flip-random">Rotation yaw flip random</a></li>
 <li><a href="#remap-particle-count-to-scalar-1">Remap particle count to scalar</a></li>
 <li><a href="#rotation-speed-random">Rotation speed random</a></li>
 <li><a href="#position-along-ring">Position along ring</a></li>
@@ -2342,12 +2342,12 @@
 </tr>
 </thead>
 <tbody></tbody>
-</table><h3 id="rotaton-orient-to-2d-direction">Rotaton orient to 2d direction</h3>
+</table><h3 id="rotation-orient-to-2d-direction">Rotation orient to 2d direction</h3>
 
 <table>
 <thead>
 <tr>
-<th>Rotaton orient to 2d direction</th>
+<th>Rotation orient to 2d direction</th>
 <th></th>
 </tr>
 </thead>
@@ -4156,12 +4156,12 @@
 </tr>
 </thead>
 <tbody></tbody>
-</table><h3 id="rotaton-random">Rotaton random</h3>
+</table><h3 id="rotation-random">Rotation random</h3>
 
 <table>
 <thead>
 <tr>
-<th>Rotaton random</th>
+<th>Rotation random</th>
 <th></th>
 </tr>
 </thead>
@@ -4415,12 +4415,12 @@
 </tr>
 </thead>
 <tbody></tbody>
-</table><h3 id="rotaton-yaw-flip-random">Rotaton yaw flip random</h3>
+</table><h3 id="rotation-yaw-flip-random">Rotation yaw flip random</h3>
 
 <table>
 <thead>
 <tr>
-<th>Rotaton yaw flip random</th>
+<th>Rotation yaw flip random</th>
 <th></th>
 </tr>
 </thead>
