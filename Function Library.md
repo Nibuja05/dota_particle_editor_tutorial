@@ -293,7 +293,7 @@
 <td><p>This enables particles to be destroyed by the effect.</p><p>All effects should have a Decay Operator (usually Lifespan Decay) unless you’re certain that the particles will get destroyed by some other means (usually code.)</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -330,7 +330,7 @@
 <td><p>Scales particles from the start to end scale over the specified time. Multiple Radius Scale operators can be used in an effect as long as their time coverage doesn’t overlap.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -367,7 +367,7 @@
 <td><p>Enables basic movement for particles. (“Basic” in the sense of <i>fundamental</i> rather than simplistic.)</p><p>It’s not a bad idea to always add Movement Basic to new effects; if it ends up being spatially static later, you can remove the Operator for a tiny performance gain.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -404,7 +404,7 @@
 <td><p>Fades particles out over time.</p><p><b>proportional fade out time</b> is a percentage of the particle’s lifetime, expressed as a range between 0 and 1. (So a setting of 0.25 on a particle with a 4-second lifetime would start fading out 3 seconds after being emitted, and would take 1 second to fade out completely.)</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -441,7 +441,7 @@
 <td><p>Fades particles in over time.</p><p><b>proportional fade in time</b> is a percentage of the particle’s lifetime, expressed as a range between 0 and 1. (So a setting of 0.5 on a particle with a 4-second lifetime would take 2 seconds to fade in completely.)</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -478,7 +478,7 @@
 <td><p>Within the specified time, each particle fades from its color at <b>fade_start_time</b> to <b>color_fade</b>.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -515,7 +515,7 @@
 <td>Causes particles to inherit the movement (and optionally rotation) of a control point.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -552,7 +552,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -589,7 +589,7 @@
 <td><p>This simply enables rotation through the effect’s Base Properties (<b>rotation_speed</b>) or through the initializer “Rotation Speed Random”.</p><p>Particle rotation can also be achieved with the operators “Rotation Spin Roll” and “Rotation Spin Yaw”, which do not require the “Rotation Basic” operator.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -626,7 +626,7 @@
 <td><p>Remaps a noise function to any exposed vector. The noise function is mapped based on both time and space, each with their own coordinate scales and offsets.</p><p>This creates a range of results that are non-random but vary based on creation time and position.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -663,7 +663,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -700,7 +700,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -737,7 +737,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -774,7 +774,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -811,7 +811,7 @@
 <td><p>Essentially combines the three operators “Lifespan Decay”, “Alpha Fade In Simple”, and “Alpha Fade Out Simple”.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -848,7 +848,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -885,7 +885,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -922,7 +922,7 @@
 <td><p>Fades particles out over a random period of time within the specified range.</p><p>Unlike “Alpha Fade Out Simple”, this operator has an option to define your range in seconds rather than a percentage of the particle’s lifespan. To use seconds, simply turn the <b>proportional</b> property off.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -959,7 +959,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -996,7 +996,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1033,7 +1033,7 @@
 <td><p>Assigns a parent particle’s attribute to each particle within the system.</p><p>This differs from the initializer “Inherit Initial Value from Parent Particle” in that the parent’s attribute will be inherited every frame in real-time.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1070,7 +1070,7 @@
 <td><p>Remaps a noise function to any exposed scalar. The noise function is mapped based on both time and space, each with their own coordinate scales and offsets.</p><p>This creates a range of results that are non-random but vary based on creation time and position.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1107,7 +1107,7 @@
 <td><p>Rotates each particle along the “roll” axis.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1144,7 +1144,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1181,7 +1181,7 @@
 <td><p>Fades particles in over a random period of time within the specified range.</p><p>Unlike “Alpha Fade In Simple”, this operator has an option to define your range in seconds rather than a percentage of the particle’s lifespan. To use seconds, simply turn the <b>proportional</b> property off.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1218,7 +1218,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1255,7 +1255,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1292,7 +1292,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1329,7 +1329,7 @@
 <td><p>Drains a particle’s internal velocity as it approaches the specified control point. If no other forces are acting on it, the particle will eventually stop.</p><p>This can be used with operator “Movement Lock to Control Point” (and its distance fade property) to have a control point “capture” particles near it then draw them along. It can also lock endpoints of a line of particles while allowing the middle section to move freely.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1366,7 +1366,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1403,7 +1403,7 @@
 <td><p>Limits the specified scalar’s value to a range between <b>output minimum</b> and <b>output maximum</b>.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1440,7 +1440,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1477,7 +1477,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1514,7 +1514,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1551,7 +1551,7 @@
 <td><p>Instantly destroys particles when they pass the specified spherical threshold.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1588,7 +1588,7 @@
 <td>if ( m_nRefCP1 &gt; -1 ){	if ( ( pParticles-&gt;GetControlPointAtCurrentTime( m_nRefCP1 ) - pCtx-&gt;m_vecPrevPos1 ).Length() &gt; m_flTolerance )	{		bDirty = true;		pCtx-&gt;m_vecPrevPos1 = pParticles-&gt;GetControlPointAtCurrentTime( m_nRefCP1 );		pCtx-&gt;m_flLerpTime = pParticles-&gt;m_flCurTime;	}}</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1625,7 +1625,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1662,7 +1662,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1699,7 +1699,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1736,7 +1736,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1773,7 +1773,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1810,7 +1810,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1847,7 +1847,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1884,7 +1884,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1921,7 +1921,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1958,7 +1958,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -1995,7 +1995,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2032,7 +2032,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2069,7 +2069,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2106,7 +2106,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2143,7 +2143,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2180,7 +2180,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2217,7 +2217,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2254,7 +2254,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2291,7 +2291,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2328,7 +2328,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2365,7 +2365,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2402,7 +2402,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2439,7 +2439,7 @@
 <td><p>Remaps any exposed scalar’s value to any other scalar on an ongoing basis.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2476,7 +2476,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2513,7 +2513,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2550,7 +2550,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2587,7 +2587,7 @@
 <td>Two New Options: <br><b>Use Quoternions Internally :</b><br> will use the Control points Matrix to extract Quoternion Rotations and apply that to the Orientation of the Particle. <br><br><b>Write Normal instead of Rotation :</b><br> is a sub section of Use Quaternion and will extract the CP Quoternion Fwd (X) Direction and map it to the Particle Normal. <br><br>While Off operator will work as before.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2624,7 +2624,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2661,7 +2661,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2698,7 +2698,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2735,7 +2735,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2772,7 +2772,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2809,7 +2809,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2846,7 +2846,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2883,7 +2883,7 @@
 <td><p>Limits the specified vector’s value to a range between <b>output minimum</b> and <b>output maximum</b>.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2920,7 +2920,7 @@
 <td>Forces particles to inherit the velocity of the first one emitted. Can copy the recorded value to a control point.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2957,7 +2957,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -2994,7 +2994,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3031,7 +3031,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3068,7 +3068,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3105,7 +3105,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3142,7 +3142,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3179,7 +3179,7 @@
 <td><p>Instantly destroys particles when they pass the specified plane.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3216,7 +3216,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3253,7 +3253,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3290,7 +3290,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3327,7 +3327,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3364,7 +3364,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3401,7 +3401,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3438,7 +3438,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3475,7 +3475,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3512,7 +3512,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3549,7 +3549,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3586,7 +3586,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3623,7 +3623,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3660,7 +3660,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3697,7 +3697,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3734,7 +3734,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3771,7 +3771,7 @@
 <td>This operator moves particles back to their starting point relative to a control point.  It interpolates them, so the strength of the move (and inversely, how much other forces can move them) can be modulated by lifespan/curve/random range/whatever.  For example they can fly off into space, then reassemble themselves over time into their original pattern.  The original position can be anything – a position within sphere, grid, ring, snapshot, etc.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3808,7 +3808,7 @@
 <td>This lets you specify up to 2 vector attributes (with weights), and up to two control points (with offsets and weights), plus an initial value and a final scale (both vectors). It then does this calculation:<blockquote>Output_attribute = final scale * ( start value + inputscale1<em>inputfield1 + inputscale2</em>inputfield2 + controlpoint1*controlpointscale1 + controlpoint2 * controlpoint2scale);</blockquote>     (Then, If the output attribute is “particle normal”, it will normalize it).<br><br>This has many uses, and can mix attributes together, normalize attributes, scale them, offset them, etc.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3845,7 +3845,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3882,7 +3882,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3919,7 +3919,7 @@
 <td>This operator is intended for sprite based renderers.  It will take the specified Control Points orientation along an axis and set the specified sprite rotation to the same rotation.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3956,7 +3956,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -3993,7 +3993,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4030,7 +4030,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4067,7 +4067,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4105,7 +4105,7 @@
 <td><p>Defines the lifetime of each particle in seconds, chosen randomly, between <b>lifetime_min</b> and <b>lifetime_max</b>.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4142,7 +4142,7 @@
 <td><p>Initializes each particle with a random radius within the specified range.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4179,7 +4179,7 @@
 <td><p>Randomly picks an initial rotation value for each particle within the specified range. The axis is chosen through the <b>rotation field</b> property.</p><p><b><i>NOTE</i></b>: The properties <b>yaw_offset_min</b> and <b>yaw_offset_max</b> are mis-named at the time of this writing. They should instead read “rotation min” and “rotation max” - these define the range.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4216,7 +4216,7 @@
 <td><p>Initializes each particle with a random color within the specified range.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4253,7 +4253,7 @@
 <td><p>Randomly spawns a particle within a sphere that’s centered on the specified control point.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4290,7 +4290,7 @@
 <td><p>Particles will be created with a random alpha value within the specified range (0-255).</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4327,7 +4327,7 @@
 <td>Moves the initial position of a particle in world or local space relative to its emission point.<p>Generally used in combination with other Position initializers. For example, it can be used to emit particles along a line while still using parts of a sphere emitter.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4364,7 +4364,7 @@
 <td>When using a multi-frame texture, this allows particles to randomly start at a minimum and maximum supplied frame.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4401,7 +4401,7 @@
 <td>Allows particle velocity to be initialized to a select range via a noise function. The noise function is mapped based on both time and space, each with their own coordinate scales and offsets. This creates a range of results that are non-random but vary based on creation time and position.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4438,7 +4438,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4475,7 +4475,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4512,7 +4512,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4549,7 +4549,7 @@
 <td><p>Initializes particle positions along a whole or partial ring.</p><p>Like “Position Within Sphere Random”, this initializer has additional functionality that can impart radial force to particles via <b>min initial speed</b> and <b>max initial speed</b>.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4586,7 +4586,7 @@
 <td><p>Remaps any exposed scalar’s initial value to any other scalar.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4623,7 +4623,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4660,7 +4660,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4697,7 +4697,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4734,7 +4734,7 @@
 <td><p>“Snaps” each particle to the ground (or a specified offset above the ground.)</p><p>Note that this operator only searches for ground BELOW its current position - if the particle is already below the ground, it won’t snap to the ground above. If there’s any doubt, simply add a Position Modify Offset Random initializer above this one in the initializer stack.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4771,7 +4771,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4808,7 +4808,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4845,7 +4845,7 @@
 <td>Allows any scalar parameter to be initialized to a select range via a noise function. The noise function is mapped based on both time and space, each with their own coordinate scales and offsets. This creates a range of results that are non-random but vary based on creation time and position.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4882,7 +4882,7 @@
 <td><p>Assigns a parent particle’s attribute to each particle’s initial value for that attribute.</p><p>This differs from the operator “Inherit Attribute from Parent Particle” in that it runs only once, on particle initialization.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4919,7 +4919,7 @@
 <td><p>Warps the initial position of a particle in world or local space relative to its emission point. Can be used to stretch initial emission shapes. A sphere can be stretched into an ovoid, or smashed.</p><p>Useful in addition to sphere emissions distance bias and absolute value to create squashed domes, rings (the elongated ring seen in Portal), etc. Warped particles’ initial speed is also warped by the corresponding amount. So particles that are stretched will have a higher initial velocity, while those that are squashed will have lower.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4956,7 +4956,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -4993,7 +4993,7 @@
 <td><p>Initializes particle positions sequentially along a line between two control points.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5030,7 +5030,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5067,7 +5067,7 @@
 <td><p>Allows any exposed scalar (such as radius, alpha, lifetime, etc.) to be initialized with a random value within the specified range.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5104,7 +5104,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5141,7 +5141,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5178,7 +5178,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5215,7 +5215,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5252,7 +5252,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5289,7 +5289,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5326,7 +5326,7 @@
 <td><p>Initializes particle positions within an <a href="https://en.wikipedia.org/wiki/Epitrochoid">epitrochoid</a>.</p><p>Notably, this position initializer can be used to modify another position initializer if <b>offset from existing position</b> is checked. With the right combination of position initializers and epitrochoid settings, you can achieve positional noise with more coherence than simple random ranges offer.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5363,7 +5363,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5400,7 +5400,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5437,7 +5437,7 @@
 <td>This operator is intended for sprite based renderers.  It will take the specified Control Points orientation along an axis and set the specified sprite rotation to the same rotation.</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5474,7 +5474,7 @@
 <td><p>Randomly spawns a particle within the specified volume.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5511,7 +5511,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5548,7 +5548,7 @@
 <td><p>Sets a particle’s lifespan based on the animation length of the sequence based at the given framerate. Used when a single particle type consists of many sequences with varying sequence lengths (some have 10 frames, others 60, but all must act appropriately without slow framerate, etc.)</p><p><i>Note:</i> If the ‘use animation rate as FPS’ flag of Render_Animated_Sprites has the same FPS settings, a particle will map it lifespan and animation together perfectly.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5585,7 +5585,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5622,7 +5622,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5659,7 +5659,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5696,7 +5696,7 @@
 <td><p>Rotates each particle along the “yaw” axis.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5733,7 +5733,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5770,7 +5770,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5807,7 +5807,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5844,7 +5844,7 @@
 <td><p>Upon particle initialization, remap any starting scalar (alpha, radius, etc.) to any starting vector (position, color, etc.)</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5881,7 +5881,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5918,7 +5918,7 @@
 <td><p>Initializes particle positions randomly along a line between two control points.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5955,7 +5955,7 @@
 <td><p>Initializes particle positions sequentially along a line between two or more control points.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -5992,7 +5992,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6029,7 +6029,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6066,7 +6066,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6103,7 +6103,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6140,7 +6140,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6177,7 +6177,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6214,7 +6214,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6251,7 +6251,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6288,7 +6288,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6325,7 +6325,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6362,7 +6362,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6399,7 +6399,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6436,7 +6436,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6473,7 +6473,7 @@
 <td><p>Remaps either a control point’s speed (effect-level) or each particle’s speed (particle-level) to a scalar value.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6510,7 +6510,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6547,7 +6547,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6584,7 +6584,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6621,7 +6621,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6658,7 +6658,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6695,7 +6695,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6732,7 +6732,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6769,7 +6769,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6806,7 +6806,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6843,7 +6843,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6880,7 +6880,7 @@
 <td><p>Moves the particles between 2 control points at a value between the minimum and maximum speed. Can be extremely useful for particle tracers, laser sights/beams, and Halo-esque sniper-rifle trails.</p><p><i>Note:</i> Normally, this initializer moves particles to the end control point and leaves them there (i.e., if new particles are created, they will spawn at the end control point and immediately vanish). To get around this, add a “Position Along Path Sequential” initializer with start and end control points of 0 ABOVE the “Move Particles Between 2 Control Points” entry.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6917,7 +6917,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6955,7 +6955,7 @@
 <td><p>Renders single- and multiple-frame sprites.</p><p>Multi-frame sequences can be animated or used to provide visual variation.</p><p>render_sprites is the workhorse renderer, and the one you’re likely to be using most of the time.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -6992,7 +6992,7 @@
 <td><p>Ropes (which were named in a simpler time) are sequences of sprites streched across a set of points. Textures intended for use on rope particles are often tiled along one axis so they can be used to create long, thin, curved forms in 3D space.</p><p>Ropes can be difficult to work with, but are surprisingly powerful and versatile.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7029,7 +7029,7 @@
 <td><p>Trails are sprites with additional built-in behavior that stretches them based on their speed over time.</p><p>Traditional use cases for trails include bullet tracers and sparks. Advanced users may also find them useful when particles need to be oriented in 3D space (a case that regular sprites handle poorly.)</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7066,7 +7066,7 @@
 <td><p>Renders one or more real-time (but not shadow-casting) light sources based on particle positions.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7103,7 +7103,7 @@
 <td><p>Renders projected textures, which are capable of certain behaviors that are otherwise difficult to achieve.</p><p>Take, for example, a large scorch-mark on the ground. If you used a flat sprite (even one oriented to the ground polygon on which it sat), it still wouldn’t look right if it crossed polygon boundaries that changed angles or elevation. A projected texture, however, will conform to the surfaces upon which it’s projected.</p><p><i>Note that unlike many other effect renderers, this one takes a VMAT rather than a VTEX. VMATs are authored in the Material Editor, and should be shader type “Projected Dota”.</i></p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7140,7 +7140,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7177,7 +7177,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7214,7 +7214,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7251,7 +7251,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7288,7 +7288,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7325,7 +7325,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7363,7 +7363,7 @@
 <td><p>Emits particles at the specified rate over time. By default, this emitter will continue to emit forever.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7400,7 +7400,7 @@
 <td><p>Emits the specified number of particles all at once and never repeats.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7437,7 +7437,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7474,7 +7474,7 @@
 <td><p>Emits particles until it reaches the specified <b>count to maintain</b>, and then stops. Whenever particles are destroyed (by whatever means), the emitter will kick in again to bring the count back up to the max.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7512,7 +7512,7 @@
 <td><p>Pulls particles toward the specified control point.</p><p>Can also be used to repel particles - simply use negative values for <b>amount of force</b>.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7549,7 +7549,7 @@
 <td><p>Generates a random force within the specified range that’s applied uniformly to all particles within the effect.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7586,7 +7586,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7623,7 +7623,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7660,7 +7660,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7697,7 +7697,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7734,7 +7734,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7771,7 +7771,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7808,7 +7808,7 @@
 <td><p>Applies a force to each particle based on its distance from a specified plane. (You can think of this as simply remapping a distance to a force range.)</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7845,7 +7845,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7883,7 +7883,7 @@
 <td><p>Allows the manual positioning of a single control point.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7920,7 +7920,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7957,7 +7957,7 @@
 <td><p>Allows the manual positioning of up to four control points.</p><p>If you’re only setting one CP, consider using “Set Single Control Point Position” instead.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -7994,7 +7994,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8031,7 +8031,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8068,7 +8068,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8105,7 +8105,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8142,7 +8142,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8179,7 +8179,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8216,7 +8216,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8253,7 +8253,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8290,7 +8290,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8327,7 +8327,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8364,7 +8364,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8401,7 +8401,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8438,7 +8438,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8475,7 +8475,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8512,7 +8512,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8549,7 +8549,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8586,7 +8586,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8623,7 +8623,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8661,7 +8661,7 @@
 <td><p>Locks particles’s positions to a specified radial range from a control point.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8698,7 +8698,7 @@
 <td><p>Allows particles to collide with scene geometry.</p><p><b>USE SPARINGLY!</b> Per-particle collision is one of the most expensive effects operations performance-wise. Also, make sure you always replace the <b>collision group</b> property “NONE” with “DEBRIS”.</p></td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8735,7 +8735,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8772,7 +8772,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8809,7 +8809,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8846,7 +8846,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
@@ -8883,7 +8883,7 @@
 <td>------------------</td>
 </tr>
 <tr>
-<td>Description</td>
+<td>Additional Notes</td>
 <td>------------------</td>
 </tr>
 </tbody>
