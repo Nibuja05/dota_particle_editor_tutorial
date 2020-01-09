@@ -377,10 +377,17 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>gravity</td>
+<td></td>
+<td>Gravitational effect on the particles.</td>
+</tr>
+</tbody>
 </table><h3 id="alpha-fade-out-simple">Alpha fade out simple</h3>
 
 <table>
@@ -3781,10 +3788,25 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
+<th>Tooltip</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>control point number</td>
+<td>integer</td>
+<td>This operator will interpolate particles into the same position relative to a control point that they were initialized in.The interpolation factor will determine how fast/strong the effect is.<b>This field is the control point that is specified for the relative position.</b></td>
+<td>Initial Position Reference CP</td>
+</tr>
+<tr>
+<td>interpolation amount</td>
+<td>float</td>
+<td>This operator will interpolate particles into the same position relative to a control point that they were initialized in.<b>The interpolation factor will determine how fast/strong the effect is.  This can be mapped to a curve or control point to modify this value.</b></td>
+<td>How strong is this interpolation to the initial position?</td>
+</tr>
+</tbody>
 </table><h3 id="calculate-vector-attribute">Calculate vector attribute</h3>
 
 <table>
@@ -3929,10 +3951,37 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
+<th>Tooltip</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>rotation field</td>
+<td>integer</td>
+<td>This operator is intended for sprite based renderers. It will take the specified Control Points orientation along an axis and set the specified sprite rotation to the same rotation. This field is for the rotation you wish to set on the sprites.</td>
+<td>Rotation value to change on particle</td>
+</tr>
+<tr>
+<td>control point number</td>
+<td>integer</td>
+<td>This operator is intended for sprite based renderers. It will take the specified Control Points orientation along an axis and set the specified sprite rotation to the same rotation. This field is for the referenced control point.</td>
+<td>Control Point to reference for rotation</td>
+</tr>
+<tr>
+<td>offset of rotation</td>
+<td>float</td>
+<td>This operator is intended for sprite based renderers. It will take the specified Control Points orientation along an axis and set the specified sprite rotation to the same rotation. <b>This field allows an offset to be set, so if the CP is at 90 degrees, but you want the sprite to be 180, you can put 90 here.</b></td>
+<td>How much to offset particles rotation for CP’s rotation in degrees</td>
+</tr>
+<tr>
+<td>control point axis</td>
+<td>integer</td>
+<td>This operator is intended for sprite based renderers. It will take the specified Control Points orientation along an axis and set the specified sprite rotation to the same rotation. <b>This is the control point axis you wish to drive the sprite rotation. You can check the particle preview panel and the X/Y/Z value specified there is the same here. So if you set the Z component, then the value shown in the particle preview for rotation on Z should be what is set on the sprite’s rotation.</b></td>
+<td>The axis to use for particle rotation - use particle preview to test.</td>
+</tr>
+</tbody>
 </table><h3 id="remap-distance-to-line-between-2-control-points-to-scalar">Remap distance to line between 2 control points to scalar</h3>
 
 <table>
@@ -4263,10 +4312,57 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>radius min</td>
+<td>float</td>
+<td>Minimum distance to spawn from the center of the sphere.</td>
+</tr>
+<tr>
+<td>radius max</td>
+<td>float</td>
+<td>Maximum distance to spawn from the center of the sphere.</td>
+</tr>
+<tr>
+<td>distance bias</td>
+<td>vector</td>
+<td>A bias to the distribution of particles in the system in X Y Z relative to each axis. 1 1 0 will create particles only in the X Y plane, while 1 1 10 will create roughly 10 times as many particles near the top and bottom of the sphere as on the X Y parts. Useful for creating discs, rings, and polar effects.</td>
+</tr>
+<tr>
+<td>distance bias abs</td>
+<td>vector</td>
+<td>Setting any axis to one will eliminate particles from one hemisphere of the distribution. Can be used to create hemispheres, quarter spheres, etc. Use wil distance bias to alter the effect. Use negative values in distance bias to flip the hemisphere from one side to the other.</td>
+</tr>
+<tr>
+<td>speed min</td>
+<td>float</td>
+<td>Minimum initial speed of the particle emitted outward from the sphere.</td>
+</tr>
+<tr>
+<td>speed max</td>
+<td>float</td>
+<td>Maximum initial speed of the particle emitted outward from the sphere.</td>
+</tr>
+<tr>
+<td>speed rand exp</td>
+<td>float</td>
+<td>The exponent which determines the biasing of particles towards one end or the other of the random range.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Local space minimum initial speed of the particle in x y z.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Local space maximum initial speed of the particle in x y z.</td>
+</tr>
+</tbody>
 </table><h3 id="alpha-random">Alpha Random</h3>
 
 <table>
@@ -4337,10 +4433,22 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>local coords</td>
+<td>boolean</td>
+<td>This bool (0/1) sets where to use world or local (emitter) space to do the offset.</td>
+</tr>
+<tr>
+<td>proportional</td>
+<td>boolean</td>
+<td>This bool (0/1) sets whether to treat the offset values as an amount relative to the particle’s radius. For example, if the offset is set to 0 0 1, and two particles have a radii of 32 and 64, they’d be moved vertically 32 and 64 units respectively.</td>
+</tr>
+</tbody>
 </table><h3 id="sequence-random">Sequence Random</h3>
 
 <table>
@@ -4559,10 +4667,22 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>particles per orbit</td>
+<td>float</td>
+<td>This along with turning on “even distribution” will evenly space the particles around the ring using X particles</td>
+</tr>
+<tr>
+<td>even distribution</td>
+<td>boolean</td>
+<td>Enabling even distribution will evenly space the particles around the ring.</td>
+</tr>
+</tbody>
 </table><h3 id="remap-scalar-1">Remap scalar</h3>
 
 <table>
@@ -4855,10 +4975,42 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>noise scale</td>
+<td>float</td>
+<td>This sets the scale of the time part of the noise function - based on particle spawn time. Larger numbers will appear increasingly random, while very small numbers will map to a similar area of the noise and look very similar.</td>
+</tr>
+<tr>
+<td>noise scale loc</td>
+<td>float</td>
+<td>This sets the scale of the spatial part of the noise function - based on particle spawn location. Larger numbers will appear increasingly random, while very small numbers will map to a similar area of the noise and look very similar. Time noise is added to spatial noise, so set one or the other to zero in order to receive no effect from that portion of the function.</td>
+</tr>
+<tr>
+<td>offset loc</td>
+<td>vector</td>
+<td>This sets the offset on the noise function to draw from. Two initial scalar noise functions set to different outputs (say alpha and radius) set to the same coordinate scales will behave the same. Offsets allow for the same scale mapping, but at a different part of the noise. So for example all small radius particles may have a high alpha rather than a low one if the offset is used.</td>
+</tr>
+<tr>
+<td>abs val</td>
+<td>boolean</td>
+<td>Noise returns -1 to 1 which is mapped to the output range. Using absolute value bool (0/1) , the output can have sudden shifts in direction as the number approaches zero and then bounces back into positives instead of going into negatives.</td>
+</tr>
+<tr>
+<td>abs val inv</td>
+<td>boolean</td>
+<td>Essentially flips the curve created by using the absolute value flag. So instead of getting sharp valleys, you get sharp peaks. The math is 1 minus the absolute value of the noise.</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>float</td>
+<td>This sets the offset on the noise function to draw from. Two initial scalar noise functions set to different outputs (say alpha and radius) set to the same coordinate scales will behave the same. Offsets allow for the same scale mapping, but at a different part of the noise. So for example all small radius particles may have a high alpha rather than a low one if the offset is used.</td>
+</tr>
+</tbody>
 </table><h3 id="inherit-attribute-from-parent-particle-2">Inherit attribute from parent particle</h3>
 
 <table>
@@ -4929,10 +5081,22 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>warp time</td>
+<td>float</td>
+<td>Treats the min/max as start and end sizes for a warp that takes place over the specified time. So the emission placement of each new particle will be warped over time.</td>
+</tr>
+<tr>
+<td>invert warp</td>
+<td>boolean</td>
+<td>In the case of a warp transition, it will make it run backwards (max to min).</td>
+</tr>
+</tbody>
 </table><h3 id="velocity-random">Velocity random</h3>
 
 <table>
@@ -5558,10 +5722,17 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>framerate</td>
+<td>float</td>
+<td>Sets the desired FPS for the animation. This is mapped to lifespan according to the number of frames in the sequence the particle receives via a <b>sequence_random</b> or other sequence-defining initializer.</td>
+</tr>
+</tbody>
 </table><h3 id="remap-initial-direction-to-cp-to-vector">Remap initial direction to CP to vector</h3>
 
 <table>
@@ -6890,10 +7061,22 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>start offset</td>
+<td>float</td>
+<td>Offset of where the particles start relative to the starting control point and direction of movement.</td>
+</tr>
+<tr>
+<td>end offset</td>
+<td>float</td>
+<td>The spread of the particles relative to the end control point. Think of this as how spray works with a gun.</td>
+</tr>
+</tbody>
 </table><h3 id="position-modify-warp-from-scalar">Position modify warp from scalar</h3>
 
 <table>
@@ -6965,10 +7148,17 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>depth bias</td>
+<td>float</td>
+<td>Offsets particle depth via the shader. This is more expensive than per particle offsets which can be achieved by using “visibility camera depth bias”</td>
+</tr>
+</tbody>
 </table><h3 id="render-rope">Render rope</h3>
 
 <table>
@@ -7373,10 +7563,27 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>start time</td>
+<td>float</td>
+<td>Time at which to begin emitting particles (seconds).</td>
+</tr>
+<tr>
+<td>emit rate</td>
+<td>float</td>
+<td>Number of particles to spawn (per second).</td>
+</tr>
+<tr>
+<td>emission duration</td>
+<td>float</td>
+<td>Length of time to continue emitting particles (seconds).</td>
+</tr>
+</tbody>
 </table><h3 id="emit-instantaniously">Emit instantaniously</h3>
 
 <table>
@@ -7410,10 +7617,27 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>particles to emit</td>
+<td>integer</td>
+<td>Number of particles to emit in a burst.</td>
+</tr>
+<tr>
+<td>min particles to emit</td>
+<td>integer</td>
+<td><p>The minimum number of particles to emit in a burst. Any value other than -1 will tell the system to randomly emit a number of particles between this value and the num_to_emit value.</p></td>
+</tr>
+<tr>
+<td>max emitted per frame</td>
+<td>integer</td>
+<td><p>The maximum number of particles to emit per frame.</p><p>For example, if the game is running at 30 frames per second and this value is set to 1, then 30 particles will be emitted in one second. Keep in mind that even though the particles are emitted at a different time, they will all die together at the same time. Therefore, if lifetime random is set to 2, then every particle regardless of when it was created will be removed after 2 seconds of the system’s lifetime.</p></td>
+</tr>
+</tbody>
 </table><h3 id="emit-noise">Emit noise</h3>
 
 <table>
@@ -7633,10 +7857,27 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>offset rate</td>
+<td>vector</td>
+<td>This will increment the noise offset each frame</td>
+</tr>
+<tr>
+<td>noise scale</td>
+<td>vector</td>
+<td>Amplitude of the noise</td>
+</tr>
+<tr>
+<td>curl</td>
+<td>boolean</td>
+<td>toggle between dnoise() and curlnoise()</td>
+</tr>
+</tbody>
 </table><h3 id="turbulent-force">Turbulent force</h3>
 
 <table>
@@ -8485,10 +8726,62 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>child group id</td>
+<td>integer</td>
+<td>Children with this Group ID specified will not fire when the system is created.Instead, they will fire based on the settings of this operator.  Group ID is available under the Base Properties as an Advanced Option of all particle systems.</td>
+</tr>
+<tr>
+<td>cluster refire time min</td>
+<td>float</td>
+<td>This is the minimum time before random firings of a child.Children are selected randomly from any systems which match the Group ID and are not currently in-progress.  Once a child has finished, it will once again be available to fire.  To have multiple concurrent children of the same type, add multiple identicle children.Because the children are of an unknownable lifespan with each firing, sequential firing is not predictable, so it will always be random amongst available children.If more specific control is needed, multiple operators with multiple Group ID’s can be used.</td>
+</tr>
+<tr>
+<td>cluster refire time max</td>
+<td>float</td>
+<td>This is the maximum time before random firings of a child.Children are selected randomly from any systems which match the Group ID and are not currently in-progress.  Once a child has finished, it will once again be available to fire.  To have multiple concurrent children of the same type, add multiple identicle children.Because the children are of an unknownable lifespan with each firing, sequential firing is not predictable, so it will always be random amongst available children.If more specific control is needed, multiple operators with multiple Group ID’s can be used.</td>
+</tr>
+<tr>
+<td>cluster size min</td>
+<td>integer</td>
+<td>This is the minimum number of children to fire before triggering a cooldown period.The operator will pick a count each time it starts a cluster and fire that many children before cooling down for the specified period.</td>
+</tr>
+<tr>
+<td>cluster size max</td>
+<td>integer</td>
+<td>This is the maximum number of children to fire before triggering a cooldown period.The operator will pick a count each time it starts a cluster and fire that many children before cooling down for the specified period.</td>
+</tr>
+<tr>
+<td>cluster cooldown min</td>
+<td>float</td>
+<td>This is the minimum amount of time to cooldown after a cluster has fired.When the specified number of children have fired, the operator will cooldown for this long before triggering additional children.</td>
+</tr>
+<tr>
+<td>cluster cooldown max</td>
+<td>float</td>
+<td>This is the maximum amount of time to cooldown after a cluster has fired.When the specified number of children have fired, the operator will cooldown for this long before triggering additional children.</td>
+</tr>
+<tr>
+<td>cluster size</td>
+<td>float</td>
+<td>Number of children to fire before entering cooldown</td>
+</tr>
+<tr>
+<td>cluster refire time</td>
+<td>float</td>
+<td>Time/RandRange/Etc. for firing off children</td>
+</tr>
+<tr>
+<td>cluster cooldown</td>
+<td>float</td>
+<td>Cooldown between clusters of firings</td>
+</tr>
+</tbody>
 </table><h3 id="set-control-point-component-to-scalar-expression">Set control point component to scalar expression</h3>
 
 <table>
@@ -8708,10 +9001,22 @@
 <thead>
 <tr>
 <th>Fields</th>
-<th></th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>cp offset</td>
+<td>vector</td>
+<td>-----</td>
+</tr>
+<tr>
+<td>collision mode</td>
+<td>integer</td>
+<td>Colission Modes :#define COLLISION_MODE_PER_PARTICLE_TRACE 0#define COLLISION_MODE_PER_FRAME_PLANESET 1#define COLLISION_MODE_INITIAL_TRACE_DOWN 2#define COLLISION_MODE_USE_NEAREST_TRACE 3</td>
+</tr>
+</tbody>
 </table><h3 id="prevent-passing-through-a-plane">Prevent passing through a plane</h3>
 
 <table>
