@@ -5,7 +5,7 @@
 
 <p>back to the <a href="../Tutorials.md">Tutorials</a>.</p>
 <h1 id="sprite-trails">Sprite Trails</h1>
-<p><a href="./Function%20Library.md#render-sprite-trail">Render sprite trail</a> is one of the hardest render methods to understand. Some interesting things about this totally awesome renderer are discussed here.</p>
+<p><a href="../Function%20Library.md#render-sprite-trail">Render sprite trail</a> is one of the hardest render methods to understand. Some interesting things about this totally awesome renderer are discussed here.</p>
 <h2 id="static-sprite-trails">1. Static Sprite Trails</h2>
 <p>What is the problem? Sometimes you may need to render a sprite trail for various reasons (e.g. trail end coloring, etc) but may also want the behavior that is more like that of a rope.</p>
 <p>So I’m going to present a way that let’s you create a static sprite trail (no flickering) that be controlled by two CPs: One for the origin of the particle and one for the direction.</p>
