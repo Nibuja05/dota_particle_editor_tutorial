@@ -47,18 +47,18 @@ More about the functions in detail here: <a href="#Functions-1">Functions</a>.</
 <h3 id="properties">Properties</h3>
 <p>The detailed data for the currently selected function is displayed here. If you want to make changes to one of the functions, this is the right place to do so.</p>
 <h3 id="controls">Controls</h3>
-<p>The control part is divided into two parts: the control points and preview. Control points are 3-dimensional vectors that form the interface between the particle effect and the code.<br>
+<p>The control part is divided into two parts: the control points and preview. Control points are 3-dimensional vectors that form the interface between the particle effect and the code. They will allow you to place your particle effect exactly where you want them and let you control all kinds of behavior.<br>
 <img src="https://i.imgur.com/1OU3mSS.png" alt="alt text"><br>
 By clicking on the colored icon to the right of the arrow, you can directly influence these points, for example by moving or rotating them. Alternatively you can also enter your desired values in the fields next to it. On the far right you will find a small lock symbol. If it is closed, the entered values are saved, so that the next time you open this effect in the Particle Editor, the values are immediately restored to the saved values. With the preview part below, other assets like models can be loaded directly into the current effect. This is only a test tool and has no influence on the final result displayed in the game. Nevertheless, it is essential for quick testing of different effects.</p>
 <h2 id="functions-1">Functions</h2>
 <p>Now that you have learned the general handling of the tool, we can start to take a closer look at the functions that make every effect work. Functions are divided into different groups, that will be explained here. You can find a complete list of all functions with their usage here: <a href="./Function%20Library.md">Functions Library</a><br>
 To add a function to one of these groups, just click the plus icon and choose an element from the list.</p>
 <h3 id="base-properties">Base Properties</h3>
-<p>The base properties hold every information about the effect, including all other groups. In addition, both initial and other important values can be found here. Some initial values that can be set here are:</p>
+<p>The base properties hold every information about the effect, including all other groups. In addition, both initial and other important values can be found here. Some initial values that can be set here are explained below. These are attributes that are are tied to every single particle in your effect and independant from each other</p>
 <ul>
-<li><code>color</code></li>
-<li><code>radis</code></li>
-<li><code>lifetime</code></li>
+<li><code>color</code> - the color the particle is tinted with.</li>
+<li><code>radius</code> - determines the size of this particle.</li>
+<li><code>lifetime</code> -  this is the time in seconds, your particle will be alive, means it will be destroyed after this time.</li>
 <li>others</li>
 </ul>
 <p>One of the most important fields here is <code>max particles</code> which is a hard cap to the number of particles maximal allowed for this effect (excluding child effects).</p>
@@ -69,4 +69,16 @@ To add a function to one of these groups, just click the plus icon and choose an
 <li><code>Emit instantaneously</code> - emits <code>num to emit</code> particles directly at the start of the effect all at once. The emission can be delayed with <code>emission start time</code>. (<a href="./Function%20Library.md#emit-instantaniously">Library</a>)</li>
 </ul>
 <h3 id="initializer">Initializer</h3>
+<p>Initializers are normally executed only once, when a particle is created. With their help particles get their initial values. An effect hardly ever gets along without initializers, especially since they play one of the most important roles in the operators: the placement of the particles.<br>
+Often Initializers are used to set some randomized initial values:</p>
+<ul>
+<li><code>Lifetime random</code> - sets the lifetime of the spawned particle to a random value between <code>lifetime min</code> and <code>lifetime max</code>. (<a href="./Function%20Library.md#lifetime-random">Library</a>)</li>
+<li><code>Radius random</code> - sets the radius of the spawned particle to a random value between <code>radius min</code> and <code>radius max</code>. (<a href="./Function%20Library.md#radius-random">Library</a>)</li>
+<li><code>Rotation random</code> - randomizes the initial rotation of the particle between <code>yaw offset min</code> and <code>yaw offset max</code> plus <code>yaw initial</code> on top of that. Mostly <code>Roll</code> is the important field important for basic sprites. <code>randomly flip direction</code> can be checked to treat the min and max value, as if they were negated. (<a href="./Function%20Library.md#rotation-random">Library</a>)</li>
+<li><code>Color Random</code> - sets the inital color to a random vector between <code>color 1</code> and <code>color 2</code>. Ignore all other fields for now, they are rarely used. (<a href="./Function%20Library.md#color-random">Library</a>)</li>
+</ul>
+<p>Besides these random value Initializers, the positional Initializers are the most important one. They determine where a particle is going to spawn. Also they have a lot of fields for adjustments, the basics will be explained below:</p>
+<ul>
+<li><code>Position within sphere random</code> - most used positional Initializer. Places new particles at a random position within a given radius around the center control point, which can be set with <code>control point number</code>. The distance for each particle is chosen randomly between <code>distance min</code> and <code>distance max</code>.  Also use this Initializer to place a particle at an exact position and just leave both distance values to 0. For more information about the other fields, lookup (<a href="./Function%20Library.md#position-within-sphere-random">Library</a>)</li>
+</ul>
 
