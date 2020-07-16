@@ -10,6 +10,7 @@ from random import randrange
 import subprocess
 from pyreadline.rlmain import Readline
 import numpy as np
+import shutil
 
 # save np.load
 np_load_old = np.load
@@ -24,10 +25,11 @@ def main(input_args):
 	rl.parse_and_bind("control-v: paste")
 
 	if "--help" in input_args or "-h" in input_args:
-		print("Possible Parameters:")
+		print("\nPossible Parameters:")
 		print("-h|--help               a list of all possible parameters")
 		print("-b|--build              retrieve all particles from the content folder")
 		print("-p|--path               set the path for the content folder")
+		print("--force_parse           force to parse built particles again")
 		print("-l_[max]|--limit_[max]  set a maximum of particles to process")
 		print("--dump                  writes all particle information in particle_dump.json")
 		print("--count                 print the count of all particles")
@@ -37,6 +39,16 @@ def main(input_args):
 		print("--operator_fields       write a list of all operators with all their fields and types in result_fields.txt")
 		print("--field_types           write a list of all fields types with count in result_types.txt")
 		print("--search_field_value    Searches for particles with tath field")
+		print("\nValve Resource Format support:")
+		print("--vrf_path              set the folder to search for 'Decompiler.exe'")
+		print("-g|--game_path          set the path for the game folder")
+		print("--vrf_build             include compiled particles in search and decompile them")
+		print("--vrf                   use decompiled particles (doesn't decompile them)")
+		sys.exit()
+
+	if len(input_args) == 0:
+		print("\nNo arguments given. Abort...")
+		print("Refer to help (-h|--help) for more information about arguments")
 		sys.exit()
 
 	if "--path" in input_args or "-p" in input_args:
@@ -44,13 +56,45 @@ def main(input_args):
 		while cPath == "":
 			cPath = input("Content Path: ")
 		if not os.path.exists(cPath):
-			print("WARNING! This path does not exist!")
+			print("This path does not exist. Exit...")
 			sys.exit()
 		else:
 			set_content_path(cPath)
 
+	if "--game_path" in input_args or "-g" in input_args:
+		gPath = ""
+		while gPath == "":
+			gPath = input("Game Path: ")
+		if not os.path.exists(gPath):
+			print("This path does not exist. Exit...")
+			sys.exit()
+		else:
+			set_game_path(gPath)
+
+	useVrf = False
+	buildVrf = False
+	if "--vrf_build" in input_args:
+		useVrf = True
+		buildVrf = True
+		vrfPath = get_vrf_path()
+		if not vrfPath:
+			if get_user_input("No path for vrf decompiler given.", useYN=True):
+				if get_user_input("Use current directory?", useYN=True, preset=False):
+					set_vrf_path(os.getcwd())
+				else:
+					newPath = get_user_input("Enter path to search: ")
+					set_vrf_path(newPath)
+		vrfPath = get_vrf_path()
+		if not vrfPath:
+			print("No Decompiler.exe found. Exit...")
+			sys.exit()
+
+	if not useVrf:
+		if "--vrf" in input_args:
+			useVrf = True
+
 	if "--build" in input_args or "-b" in input_args:
-		build_main_file()
+		build_main_file(useVrf, buildVrf)
 	if not os.path.isfile(path):
 		print("WARNING! complete_particle_list.txt does not exist!")
 		answer = None
@@ -61,7 +105,7 @@ def main(input_args):
 			elif userInput.lower() == "n" or userInput.lower() == "no":
 				answer = False
 		if answer:
-			build_main_file()
+			build_main_file(useVrf, buildVrf)
 		else:
 			print("Exit...")
 			sys.exit()
@@ -255,23 +299,147 @@ def get_field_type(name, field, indent = 1):
 		fieldType += "\t" * indent + "}"
 	return "\t" * indent + name + " = " + fieldType + "\n"
 
+def get_user_input(text, useYN = False, preset = True):
+	if useYN:
+		if preset:
+			print(text)
+		answer = None
+		while answer is None:
+			if preset:
+				userInput = input("Do you want to set it now? (y|n) ")
+			else:
+				userInput = input(text + " (y|n) ")
+			if userInput.lower() == "y" or userInput.lower() == "yes":
+				answer = True
+			elif userInput.lower() == "n" or userInput.lower() == "no":
+				answer = False
+		if answer:
+			return True
+	else:
+		userInput = input(text)
+		return userInput
+
 def set_content_path(path):
-	filePath = os.path.join(os.getcwd(), "content_path.txt")
+	filePath = os.path.join(os.getcwd(), "settings.json")
+	settings = {}
 	if os.path.exists(filePath):
-		os.remove(filePath)
-	with open(filePath, "w") as file:
-		file.write(path)
-		subprocess.check_call(["attrib","+H","./content_path.txt"])
+		with open(filePath, "r") as file:
+			settings = json.load(file)
+	with open(filePath, "r+") as file:
+		settings["content_path"] = path
+		json.dump(settings, file)
+		subprocess.check_call(["attrib","+H","./settings.json"])
 
 def get_content_path():
-	with open(os.path.join(os.getcwd(), "content_path.txt")) as file:
-		return file.read()
-	print("Something went wrong...")
-	sys.exit()
-	return
+	if os.path.isfile(os.path.join(os.getcwd(), "settings.json")):
+		with open(os.path.join(os.getcwd(), "settings.json"), "r") as file:
+			settings = json.load(file)
+			if "content_path" in settings:
+				return settings["content_path"]
+	return False
 
-def build_main_file():
-	if not os.path.isfile(os.path.join(os.getcwd(), "content_path.txt")):
+def set_game_path(path):
+	filePath = os.path.join(os.getcwd(), "settings.json")
+	settings = {}
+	if os.path.exists(filePath):
+		with open(filePath, "r") as file:
+			settings = json.load(file)
+	with open(filePath, "r+") as file:
+		settings["game_path"] = path
+		json.dump(settings, file)
+		subprocess.check_call(["attrib","+H","./settings.json"])
+
+def get_game_path():
+	if os.path.isfile(os.path.join(os.getcwd(), "settings.json")):
+		with open(os.path.join(os.getcwd(), "settings.json"), "r") as file:
+			settings = json.load(file)
+			if "game_path" in settings:
+				return settings["game_path"]
+	return False
+
+def set_vrf_path(path):
+	decPath = os.path.join(path, "Decompiler.exe")
+	if not os.path.exists(decPath):
+		print("No Decompiler.exe found. Exit...")
+		sys.exit()
+
+	filePath = os.path.join(os.getcwd(), "settings.json")
+	settings = {}
+	if os.path.exists(filePath):
+		with open(filePath, "r") as file:
+			settings = json.load(file)
+	with open(filePath, "r+") as file:
+		settings["vrf_path"] = path
+		json.dump(settings, file)
+		subprocess.check_call(["attrib","+H","./settings.json"])
+
+def get_vrf_path():
+	if os.path.isfile(os.path.join(os.getcwd(), "settings.json")):
+		with open(os.path.join(os.getcwd(), "settings.json"), "r") as file:
+			settings = json.load(file)
+			if "vrf_path" in settings:
+				return settings["vrf_path"]
+	return False
+
+def compile_files(decList):
+	path = get_game_path()
+	if not path:
+		if get_user_input("No game path given.", useYN=True):
+			newPath = get_user_input("Game Path:")
+			if os.path.isdir(newPath):
+				set_vrf_path(newPath)
+			else:
+				print("This path does not exit. Exit...")
+				sys.exit()
+
+	nameList = []
+	for decPath in decList:
+		namePattern = r'\\(.*?(\w+)\.vpcf)'
+		nameMatch = re.search(namePattern, decPath)
+		if nameMatch:
+			name = nameMatch.group(2)
+			nameList.append(name)
+
+
+	results = [y for x in os.walk(path) for y in glob(os.path.join(x[0], '*.vpcf_c'))]
+
+	newResults = []
+	for res in results:
+		namePattern = r'\\(.*?(\w+)\.vpcf_c)'
+		nameMatch = re.search(namePattern, res)
+		if nameMatch:
+			name = nameMatch.group(2)
+			if not name in nameList:
+				newResults.append(res)
+
+	tempPath = "./temp_decompiled"
+
+	pathCreated = False
+	while not pathCreated:
+		try:
+			if os.path.isdir(tempPath):
+				shutil.rmtree(tempPath)
+			os.makedirs(tempPath)
+			pathCreated = True
+		except:
+			pass
+	
+	subprocess.check_call(["attrib","+H",tempPath])
+
+	vrfPath = os.path.join(get_vrf_path(), "Decompiler.exe")
+	FNULL = open(os.devnull, 'w')
+
+	maxCount = len(newResults)
+	for i,res in enumerate(newResults):
+		print_status("Decompiling found .vpcf_c files...", maxCount, i+1)
+		relativePath = res.replace(path, "")[1:][:-2]
+		command = vrfPath  + " -i \"%s\" -o \"%s\" --vpk_decompile" % (res, os.path.join(tempPath, relativePath))
+		subprocess.call(command, shell=True, stdout=FNULL)
+
+def build_main_file(useVrf, buildVrf):
+	path = get_content_path()
+
+	if not path:
 		print("WARNING! you haven't set a path to your content folder yet!")
 		answer = None
 		while answer is None:
@@ -295,6 +463,13 @@ def build_main_file():
 	print("Building main file...")
 	# path = "C:\\SteamLibrary\\steamapps\\common\\dota 2 beta\\content\\dota\\particles"
 	results = [y for x in os.walk(path) for y in glob(os.path.join(x[0], '*.vpcf'))]
+
+	if buildVrf:
+		compile_files(results)
+
+	if useVrf and os.path.isdir("./temp_decompiled"):
+		results += [y for x in os.walk("./temp_decompiled") for y in glob(os.path.join(x[0], '*.vpcf'))]
+
 	maxCount = len(results)
 	index = 1
 	completeText = ""
