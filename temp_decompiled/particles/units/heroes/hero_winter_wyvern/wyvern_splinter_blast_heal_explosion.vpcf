@@ -1,0 +1,229 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 16
+	m_ConstantColor = 
+	[
+		255,
+		255,
+		255,
+		175,
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
+			m_flAddSelfAmount = 1.000000
+			m_bSaturateColorPreAlphaBlend = false
+			m_hTexture = resource:"materials/particle/crystal/crystal.vtex"
+			m_flAnimationRate = 2.000000
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.080000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-500.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_FadeAndKill"
+			m_flEndFadeInTime = 0.150000
+			m_flStartAlpha = 0.000000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.300000
+			m_flEndScale = 0.000000
+			m_flStartScale = 2.000000
+		},
+		
+		{
+			_class = "C_OP_SpinUpdate"
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMax = 1.000000
+			m_fLifetimeMin = 0.500000
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+			m_nControlPointNumber = 3
+			m_fSpeedMax = 1000.000000
+			m_fRadiusMax = 32.000000
+			m_vecDistanceBiasAbs = 
+			[
+				0.000000,
+				0.000000,
+				1.000000,
+			]
+			m_fSpeedMin = 500.000000
+			m_vecDistanceBias = 
+			[
+				1.000000,
+				1.000000,
+				0.250000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMin = 2.000000
+			m_flRadiusMax = 12.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				161,
+				255,
+				173,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 12
+		},
+		
+		{
+			_class = "C_INIT_RandomRotationSpeed"
+			m_flDegreesMin = 180.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_vecOutputMax = 
+			[
+				300.000000,
+				300.000000,
+				300.000000,
+			]
+			m_vecOutputMin = 
+			[
+				-300.000000,
+				-300.000000,
+				0.000000,
+			]
+			m_flNoiseScaleLoc = 0.453540
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 16.000000
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_winter_wyvern/wyvern_splinter_blast_heal_explosion_flare.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_winter_wyvern/wyvern_splinter_blast_heal_explosion_smoke.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_winter_wyvern/wyvern_splinter_blast_heal_explosion_trail.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 7
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

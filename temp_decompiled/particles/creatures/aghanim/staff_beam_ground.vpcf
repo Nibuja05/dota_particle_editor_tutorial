@@ -1,0 +1,137 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 16
+	m_flConstantRadius = 15.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
+			m_hTexture = resource:"materials/particle/projected_ground_scorched_black.vtex"
+			m_flAnimationRate = 1.000000
+			m_nOrientationType = 2
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.500000
+		},
+		
+		{
+			_class = "C_OP_FadeInSimple"
+			m_flFadeInTime = 0.125000
+		},
+		
+		{
+			_class = "C_OP_SpinUpdate"
+		},
+		
+		{
+			_class = "C_OP_RemapCPVisibilityToScalar"
+			m_nControlPoint = 1
+			m_flInputMax = 0.100000
+			m_nFieldOutput = "16"
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMin = 4.000000
+			m_fLifetimeMax = 5.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusRandExponent = 0.500000
+			m_flRadiusMin = 100.000000
+			m_flRadiusMax = 200.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomAlpha"
+			m_nAlphaMin = 100
+		},
+		
+		{
+			_class = "C_INIT_RingWave"
+			m_nControlPointNumber = 3
+			m_flInitialRadius = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 100.000000
+			}
+		},
+		
+		{
+			_class = "C_INIT_Orient2DRelToCP"
+			m_flRotOffset = 180.000000
+			m_nCP = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				-5.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 4
+				m_nVectorComponent = 0
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 5.000000
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_char.vpcf"
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_RemapSpeedtoCP"
+			m_nInControlPointNumber = 3
+			m_flInputMin = 10.000000
+			m_flInputMax = 50.000000
+			m_nOutControlPointNumber = 4
+			m_flOutputMin = 0.250000
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

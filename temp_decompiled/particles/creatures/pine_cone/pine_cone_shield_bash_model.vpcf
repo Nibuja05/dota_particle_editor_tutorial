@@ -1,0 +1,385 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderModels"
+			m_ModelList = 
+			[
+				
+				{
+					m_model = resource:"models/particle/generic_swoop_1.vmdl"
+				},
+			]
+			m_bOrientZ = true
+			m_MaterialVars = 
+			[
+				
+				{
+					m_strVariable = "$TRANS_OFFSET_V"
+				},
+				
+				{
+					m_strVariable = "$TRANS_SCALE_V"
+					m_nVariableField = "26"
+				},
+			]
+			m_hOverrideMaterial = resource:"materials/models/heroes/mars/mars_shield_bash_swoop.vmat"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.000000
+			m_flBias = 0.950000
+		},
+		
+		{
+			_class = "C_OP_SetFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_AGE"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 0.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.119831
+							y = 0.933048
+							m_flSlopeIncoming = 0.000000
+							m_flSlopeOutgoing = 0.000000
+						},
+						
+						{
+							x = 0.479423
+							y = 0.000000
+							m_flSlopeIncoming = 0.000000
+							m_flSlopeOutgoing = -2.594736
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_FREE"
+							m_nOutgoingTangent = "CURVE_TANGENT_MIRROR"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_FREE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.500000,
+						1.000000,
+					]
+				}
+			}
+			m_nOutputField = "7"
+		},
+		
+		{
+			_class = "C_OP_SetFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_AGE"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 0.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.000000
+							y = 0.000000
+							m_flSlopeIncoming = 0.157509
+							m_flSlopeOutgoing = 0.157509
+						},
+						
+						{
+							x = 0.500000
+							y = 1.500000
+							m_flSlopeIncoming = 0.131058
+							m_flSlopeOutgoing = 0.131058
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_FREE"
+							m_nOutgoingTangent = "CURVE_TANGENT_MIRROR"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_MIRROR"
+							m_nOutgoingTangent = "CURVE_TANGENT_FREE"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.500000,
+						1.500000,
+					]
+				}
+			}
+			m_nOutputField = "18"
+		},
+		
+		{
+			_class = "C_OP_SetFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_AGE"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 0.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.000000
+							y = 0.615619
+							m_flSlopeIncoming = 0.000000
+							m_flSlopeOutgoing = 1.222553
+						},
+						
+						{
+							x = 0.472080
+							y = 1.192762
+							m_flSlopeIncoming = 1.222553
+							m_flSlopeOutgoing = 0.000000
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_LINEAR"
+							m_nOutgoingTangent = "CURVE_TANGENT_LINEAR"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_LINEAR"
+							m_nOutgoingTangent = "CURVE_TANGENT_LINEAR"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.500000,
+						2.000000,
+					]
+				}
+			}
+			m_nOutputField = "26"
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				255,
+				33,
+				0,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_OP_SetControlPointsToModelParticles"
+			m_nFirstControlPoint = 6
+			m_bSkin = true
+		},
+		
+		{
+			_class = "C_OP_RemapCPtoVector"
+			m_nCPInput = 60
+			m_nFieldOutput = "6"
+			m_vInputMax = 
+			[
+				255.000000,
+				255.000000,
+				255.000000,
+			]
+			m_vOutputMax = 
+			[
+				1.000000,
+				1.000000,
+				1.000000,
+			]
+			m_flOpStrength = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 61
+				m_nVectorComponent = 0
+				m_nMapType = "PF_MAP_TYPE_REMAP"
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+			}
+			m_bDisableOperator = true
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+			m_bLocalCoords = true
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				150.000000,
+				0.000000,
+				0.000000,
+			]
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				150.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				10.000000,
+				0.000000,
+				256.000000,
+			]
+			m_OffsetMax = 
+			[
+				10.000000,
+				0.000000,
+				256.000000,
+			]
+			m_bLocalCoords = true
+		},
+		
+		{
+			_class = "C_INIT_Orient2DRelToCP"
+			m_nFieldOutput = "12"
+			m_flRotOffset = -90.000000
+		},
+		
+		{
+			_class = "C_INIT_PositionPlaceOnGround"
+			m_flOffset = 50.000000
+			m_flMaxTraceLength = 512.000000
+			m_CollisionGroupName = "DEBRIS"
+		},
+		
+		{
+			_class = "C_INIT_RemapCPtoScalar"
+			m_nCPInput = 1
+			m_flInputMax = 600.000000
+			m_flOutputMax = 70.000000
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+		},
+	]
+	m_nMaxParticles = 1
+	m_nBehaviorVersion = 10
+	m_nFirstMultipleOverride_BackwardCompat = 8
+	m_flConstantLifespan = 0.500000
+	m_flConstantRadius = 60.000000
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/creatures/pine_cone/pine_cone_shield_bash_edge.vpcf"
+		},
+	]
+}

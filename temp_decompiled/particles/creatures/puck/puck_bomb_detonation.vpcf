@@ -1,0 +1,248 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 4
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_hTexture = resource:"materials/particle/particle_glow_02.vtex"
+			m_nOrientationType = 2
+			m_bSaturateColorPreAlphaBlend = false
+			m_flAddSelfAmount = 2.000000
+			m_flOverbrightFactor = 8.000000
+			m_vecColorScale = 
+			{
+				m_nType = "PVEC_TYPE_LITERAL_COLOR"
+				m_LiteralColor = 
+				[
+					255,
+					255,
+					255,
+				]
+			}
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeInSimple"
+			m_flFadeInTime = 0.125000
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.500000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.950000
+			m_flStartScale = 0.000000
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				180,
+				59,
+				103,
+				255,
+			]
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				139,
+				250,
+				100,
+				255,
+			]
+			m_ColorMax = 
+			[
+				36,
+				216,
+				155,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RemapCPtoScalar"
+			m_flOutputMax = 2500.000000
+			m_flInputMax = 3000.000000
+			m_nCPInput = 1
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				10.000000,
+			]
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				10.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				254,
+				87,
+				148,
+				255,
+			]
+			m_ColorMax = 
+			[
+				199,
+				45,
+				101,
+				255,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_model.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_rings.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_smoke.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_rings.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_light.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_fire.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_rings_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_flash.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_dust.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_debris.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_debris_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_embers.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/puck/puck_bomb_detonation_flash_b.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_nFirstMultipleOverride_BackwardCompat = 5
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						1.000000,
+						1.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_flConstantLifespan = 0.500000
+}

@@ -1,0 +1,98 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 30
+	m_ConstantColor = 
+	[
+		111,
+		98,
+		255,
+		150,
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_beam_refract.vpcf"
+			m_bDisableChild = true
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_beam_body.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_beam_core.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_beam_fire.vpcf"
+		},
+	]
+	m_flConstantRadius = 200.000000
+	m_nBehaviorVersion = 10
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

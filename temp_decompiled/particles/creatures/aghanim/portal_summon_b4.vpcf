@@ -1,0 +1,141 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_BoundingBoxMin = 
+	[
+		-512.000000,
+		-512.000000,
+		-32.000000,
+	]
+	m_BoundingBoxMax = 
+	[
+		512.000000,
+		512.000000,
+		32.000000,
+	]
+	m_flConstantRadius = 100.000000
+	m_flConstantLifespan = 0.500000
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_nOrientationType = 2
+			m_bGammaCorrectVertexColors = false
+			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
+			m_bRefract = true
+			m_flRefractAmount = 0.035000
+			m_nRefractBlurRadius = 3
+			m_nRefractBlurType = "BLURFILTER_BOX"
+			m_bDisableZBuffering = true
+			m_hTexture = resource:"materials/particle/warp_circle_hollow04.vtex"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartScale = 0.000000
+			m_flEndScale = 1.250000
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.500000
+		},
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RingWave"
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMin = 0.750000
+			m_fLifetimeMax = 0.750000
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_flStartTime = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 0.050000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flLOD0 = 0.000000
+				m_flLOD1 = 0.000000
+				m_flLOD2 = 0.000000
+				m_flLOD3 = 0.000000
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+					]
+					m_tangents = 
+					[
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.000000,
+						0.000000,
+					]
+				}
+			}
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_nFirstMultipleOverride_BackwardCompat = 2
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+		},
+	]
+}

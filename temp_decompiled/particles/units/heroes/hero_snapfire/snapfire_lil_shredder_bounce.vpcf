@@ -1,0 +1,334 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_ConstantColor = 
+	[
+		255,
+		255,
+		255,
+		10,
+	]
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderTrails"
+			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
+			m_flOverbrightFactor = 3.000000
+			m_hTexture = resource:"materials/particle/sparks/sparks.vtex"
+			m_flLengthFadeInTime = 0.025000
+			m_flMaxLength = 384.000000
+			m_flFinalTextureScaleV = -1.000000
+			m_flFinalTextureOffsetV = 1.000000
+			m_nHSVShiftControlPoint = 62
+			m_flRadiusScale = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.500000
+			}
+			m_vecTailColorScale = 
+			{
+				m_nType = "PVEC_TYPE_LITERAL_COLOR"
+				m_LiteralColor = 
+				[
+					255,
+					255,
+					255,
+				]
+			}
+			m_flTailAlphaScale = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.000000
+			}
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_MaxVelocity"
+			m_flMaxVelocity = 600.000000
+			m_nOverrideCP = 2
+		},
+		
+		{
+			_class = "C_OP_Decay"
+			m_nOpEndCapState = 1
+		},
+		
+		{
+			_class = "C_OP_SetChildControlPoints"
+			m_bSetOrientation = true
+			m_nFirstControlPoint = 3
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_nSpinRateDegrees = 18
+		},
+		
+		{
+			_class = "C_OP_DampenToCP"
+			m_nControlPointNumber = 1
+			m_flRange = 16.000000
+			m_flScale = 100.000000
+		},
+		
+		{
+			_class = "C_OP_DistanceToCP"
+			m_flInputMin = 23.000000
+			m_flInputMax = 24.000000
+			m_nFieldOutput = "10"
+			m_flOutputMax = 0.200000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMax = 17.000000
+			m_flRadiusMin = 17.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+		},
+		
+		{
+			_class = "C_INIT_RandomTrailLength"
+			m_flMaxLength = 0.200000
+			m_flMinLength = 0.200000
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_AttractToControlPoint"
+			m_nControlPointNumber = 1
+			m_fFalloffPower = 0.000000
+			m_fForceAmount = 
+			{
+				m_flLiteralValue = 1000000.000000
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_bEndCap = true
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_b.vpcf"
+		},
+		
+		{
+			m_bEndCap = true
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_j0.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_c.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_h.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_d.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_k.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_g.vpcf"
+		},
+		
+		{
+			m_bEndCap = true
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_j.vpcf"
+		},
+		
+		{
+			m_bEndCap = true
+			m_ChildRef = resource:"particles/units/heroes/hero_snapfire/snapfire_lil_shredder_bounce_f.vpcf"
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_HSVShiftToCP"
+			m_DefaultHSVColor = 
+			[
+				235,
+				148,
+				0,
+				255,
+			]
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 9
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 60
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						8.000000,
+						229.000000,
+						96.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 61
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

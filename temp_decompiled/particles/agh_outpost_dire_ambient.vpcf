@@ -1,0 +1,114 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 10
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+					m_attachmentName = "attach_fx"
+				},
+				
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						-82.054222,
+						-10.959204,
+						742.883545,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/props_structures/outpost.vmdl"
+				m_sequenceName = "outpost_captured_idle"
+				m_hitboxSetName = "default"
+			}
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_SetSingleControlPointPosition"
+			m_nCP1 = 2
+			m_vecCP1Pos = 
+			[
+				-650.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_mist.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_beam_detail.vpcf"
+			m_bDisableChild = true
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_embers.vpcf"
+			m_bDisableChild = true
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_debris.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_core.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_base_glow.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_channel.vpcf"
+			m_bDisableChild = true
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_light.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/world_outpost/world_outpost_dire_ambient_shockwave.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+}

@@ -1,0 +1,543 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 160
+	m_flConstantRadius = 1.500000
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderModels"
+			m_nSubModelField = "9"
+			m_nBodyGroupField = "18"
+			m_ModelList = 
+			[
+				
+				{
+					m_model = resource:"models/particle/tiny_rocks.vmdl"
+				},
+			]
+			m_bAnimated = true
+			m_nLOD = 1
+			m_bForceLoopingAnimation = true
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.050000
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				-400.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_SetControlPointsToParticle"
+			m_bSetOrientation = true
+			m_nFirstControlPoint = 3
+		},
+		
+		{
+			_class = "C_OP_Spin"
+			m_fSpinRateStopTime = 3.000000
+			m_nSpinRateDegrees = 55
+			m_flOpStartFadeInTime = 999.000000
+			m_flOpEndFadeInTime = 999.000000
+		},
+		
+		{
+			_class = "C_OP_SpinYaw"
+			m_nSpinRateDegrees = 2
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartTime = 0.800000
+			m_flEndScale = 0.500000
+			m_flBias = 0.350000
+		},
+		
+		{
+			_class = "C_OP_SpinUpdate"
+		},
+		
+		{
+			_class = "C_OP_RemapSpeed"
+			m_flInputMin = 10.000000
+			m_flInputMax = 200.000000
+			m_nFieldOutput = "5"
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndTime = 0.150000
+			m_flStartScale = 0.000000
+		},
+		
+		{
+			_class = "C_OP_RemapCPtoVector"
+			m_nCPInput = 60
+			m_nFieldOutput = "6"
+			m_vInputMax = 
+			[
+				255.000000,
+				255.000000,
+				255.000000,
+			]
+			m_vOutputMax = 
+			[
+				1.000000,
+				1.000000,
+				1.000000,
+			]
+			m_flOpStrength = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 61
+				m_nVectorComponent = 0
+				m_nMapType = "PF_MAP_TYPE_REMAP"
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+			m_vecDistanceBias = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_fRadiusMin = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 0
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 0.000000
+			}
+			m_fRadiusMax = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 0
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 1.000000
+			}
+			m_fSpeedMin = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 1
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 0.000000
+			}
+			m_fSpeedMax = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 1
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 1.000000
+			}
+			m_LocalCoordinateSystemSpeedMin = 
+			{
+				m_nType = "PVEC_TYPE_FLOAT_COMPONENTS"
+				m_FloatComponentX = 
+				{
+					m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+					m_nControlPoint = 1
+					m_nVectorComponent = 2
+					m_nMapType = "PF_MAP_TYPE_MULT"
+					m_flMultFactor = 2.000000
+				}
+				m_FloatComponentY = 
+				{
+					m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+					m_nControlPoint = 1
+					m_nVectorComponent = 2
+					m_nMapType = "PF_MAP_TYPE_MULT"
+					m_flMultFactor = -0.250000
+				}
+				m_FloatComponentZ = 
+				{
+					m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+					m_nControlPoint = 1
+					m_nVectorComponent = 2
+					m_nMapType = "PF_MAP_TYPE_MULT"
+					m_flMultFactor = 1.000000
+				}
+			}
+			m_LocalCoordinateSystemSpeedMax = 
+			{
+				m_nType = "PVEC_TYPE_FLOAT_COMPONENTS"
+				m_FloatComponentX = 
+				{
+					m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+					m_nControlPoint = 1
+					m_nVectorComponent = 2
+					m_nMapType = "PF_MAP_TYPE_MULT"
+					m_flMultFactor = 2.500000
+				}
+				m_FloatComponentY = 
+				{
+					m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+					m_nControlPoint = 1
+					m_nVectorComponent = 2
+					m_nMapType = "PF_MAP_TYPE_MULT"
+					m_flMultFactor = 0.250000
+				}
+				m_FloatComponentZ = 
+				{
+					m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+					m_nControlPoint = 1
+					m_nVectorComponent = 2
+					m_nMapType = "PF_MAP_TYPE_MULT"
+					m_flMultFactor = 2.000000
+				}
+			}
+		},
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMin = 2.000000
+			m_fLifetimeMax = 3.000000
+		},
+		
+		{
+			_class = "C_INIT_NormalAlignToCP"
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		
+		{
+			_class = "C_INIT_RandomYaw"
+		},
+		
+		{
+			_class = "C_INIT_RandomScalar"
+			m_nFieldOutput = "20"
+			m_flMax = 1.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMax = 3.000000
+			m_flRadiusMin = 0.500000
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				223,
+				222,
+				222,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomRotationSpeed"
+			m_flDegreesMin = 200.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMin = 5
+			m_nSequenceMax = 6
+		},
+		
+		{
+			_class = "C_INIT_RemapScalar"
+			m_nFieldInput = "3"
+			m_flInputMax = 1.500000
+			m_nFieldOutput = "1"
+			m_flOutputMin = 1.000000
+			m_flOutputMax = 0.250000
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				-200.000000,
+				0.000000,
+				0.000000,
+			]
+			m_OffsetMax = 
+			[
+				-100.000000,
+				0.000000,
+				0.000000,
+			]
+			m_bLocalCoords = true
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 70.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_flLOD0 = 0.000000
+				m_flLOD1 = 0.000000
+				m_flLOD2 = 0.000000
+				m_flLOD3 = 0.000000
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+					]
+					m_tangents = 
+					[
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.000000,
+						0.000000,
+					]
+				}
+			}
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_flOpStartFadeInTime = 999.000000
+			m_flOpEndFadeInTime = 999.000000
+			m_MinForce = 
+			[
+				-300.000000,
+				-300.000000,
+				-300.000000,
+			]
+			m_MaxForce = 
+			[
+				300.000000,
+				300.000000,
+				300.000000,
+			]
+		},
+	]
+	m_Constraints = 
+	[
+		
+		{
+			_class = "C_OP_WorldTraceConstraint"
+			m_flBounceAmount = 0.900000
+			m_flSlideAmount = 0.125000
+			m_flRadiusScale = 20.000000
+			m_flTraceTolerance = 32.000000
+			m_nCollisionMode = "COLLISION_MODE_USE_NEAREST_TRACE"
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_tiny/tiny_avalanche_d.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_tiny/tiny_avalanche_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_tiny/tiny_avalanche_c.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_tiny/tiny_avalanche_e.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_tiny/tiny_avalanche_f.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/storegga/storegga_avalanche_directional_glow.vpcf"
+			m_bDisableChild = true
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_HSVShiftToCP"
+			m_DefaultHSVColor = 
+			[
+				137,
+				117,
+				111,
+				255,
+			]
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_nFirstMultipleOverride_BackwardCompat = 10
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						1.000000,
+						1.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 60
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						8.000000,
+						229.000000,
+						96.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 61
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						-116.772171,
+						0.161607,
+						-267.120605,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 62
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

@@ -1,0 +1,765 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 10
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_bSaturateColorPreAlphaBlend = false
+			m_bAdditive = true
+			m_nFeatheringMode = "PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL"
+			m_hTexture = resource:"materials/particles/light_flare/light_glow_01.vtex"
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		
+		{
+			_class = "C_OP_Decay"
+			m_nOpEndCapState = 1
+		},
+		
+		{
+			_class = "C_OP_MaintainSequentialPath"
+			m_flNumToAssign = 10.000000
+			m_PathParams = 
+			{
+				m_nEndControlPointNumber = 3
+				m_vStartPointOffset = 
+				[
+					0.000000,
+					0.000000,
+					144.000000,
+				]
+				m_vEndOffset = 
+				[
+					0.000000,
+					0.000000,
+					144.000000,
+				]
+			}
+		},
+		
+		{
+			_class = "C_OP_RemapVisibilityScalar"
+			m_nFieldOutput = "16"
+			m_flInputMax = 0.001000
+			m_flRadiusScale = 0.010000
+		},
+		
+		{
+			_class = "C_OP_SetFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_AGE_NORMALIZED"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 0.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.000000
+							y = 0.000000
+							m_flSlopeIncoming = 10.871284
+							m_flSlopeOutgoing = 10.871284
+						},
+						
+						{
+							x = 0.101184
+							y = 1.100000
+							m_flSlopeIncoming = 7.394694
+							m_flSlopeOutgoing = 7.394694
+						},
+						
+						{
+							x = 0.141658
+							y = 1.047514
+							m_flSlopeIncoming = -1.296790
+							m_flSlopeOutgoing = -1.296790
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						1.000000,
+						1.100000,
+					]
+				}
+			}
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		
+		{
+			_class = "C_OP_EndCapTimedDecay"
+			m_flDecayTime = 0.250000
+		},
+		
+		{
+			_class = "C_OP_LerpEndCapScalar"
+			m_nFieldOutput = "7"
+			m_flOutput = 0.000000
+			m_flLerpTime = 0.250000
+		},
+		
+		{
+			_class = "C_OP_SetVec"
+			m_InputValue = 
+			{
+				m_nType = "PVEC_TYPE_FLOAT_INTERP_GRADIENT"
+				m_vLiteralValue = 
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+				]
+				m_LiteralColor = 
+				[
+					0,
+					0,
+					0,
+					0,
+				]
+				m_nVectorAttribute = 6
+				m_vVectorAttributeScale = 
+				[
+					1.000000,
+					1.000000,
+					1.000000,
+				]
+				m_nControlPoint = 0
+				m_vCPValueScale = 
+				[
+					1.000000,
+					1.000000,
+					1.000000,
+				]
+				m_vCPRelativePosition = 
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+				]
+				m_vCPRelativeDir = 
+				[
+					1.000000,
+					0.000000,
+					0.000000,
+				]
+				m_FloatComponentX = 
+				{
+					m_nType = "PF_TYPE_LITERAL"
+					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_flLiteralValue = 0.000000
+					m_nControlPoint = 0
+					m_nScalarAttribute = 3
+					m_nVectorAttribute = 6
+					m_nVectorComponent = 0
+					m_flRandomMin = 0.000000
+					m_flRandomMax = 1.000000
+					m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+					m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+					m_flMultFactor = 1.000000
+					m_flInput0 = 0.000000
+					m_flInput1 = 1.000000
+					m_flOutput0 = 0.000000
+					m_flOutput1 = 1.000000
+					m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+					m_flBiasParameter = 0.000000
+					m_Curve = 
+					{
+						m_spline = 
+						[
+						]
+						m_tangents = 
+						[
+						]
+						m_vDomainMins = 
+						[
+							0.000000,
+							0.000000,
+						]
+						m_vDomainMaxs = 
+						[
+							0.000000,
+							0.000000,
+						]
+					}
+				}
+				m_FloatComponentY = 
+				{
+					m_nType = "PF_TYPE_LITERAL"
+					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_flLiteralValue = 0.000000
+					m_nControlPoint = 0
+					m_nScalarAttribute = 3
+					m_nVectorAttribute = 6
+					m_nVectorComponent = 0
+					m_flRandomMin = 0.000000
+					m_flRandomMax = 1.000000
+					m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+					m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+					m_flMultFactor = 1.000000
+					m_flInput0 = 0.000000
+					m_flInput1 = 1.000000
+					m_flOutput0 = 0.000000
+					m_flOutput1 = 1.000000
+					m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+					m_flBiasParameter = 0.000000
+					m_Curve = 
+					{
+						m_spline = 
+						[
+						]
+						m_tangents = 
+						[
+						]
+						m_vDomainMins = 
+						[
+							0.000000,
+							0.000000,
+						]
+						m_vDomainMaxs = 
+						[
+							0.000000,
+							0.000000,
+						]
+					}
+				}
+				m_FloatComponentZ = 
+				{
+					m_nType = "PF_TYPE_LITERAL"
+					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_flLiteralValue = 0.000000
+					m_nControlPoint = 0
+					m_nScalarAttribute = 3
+					m_nVectorAttribute = 6
+					m_nVectorComponent = 0
+					m_flRandomMin = 0.000000
+					m_flRandomMax = 1.000000
+					m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+					m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+					m_flMultFactor = 1.000000
+					m_flInput0 = 0.000000
+					m_flInput1 = 1.000000
+					m_flOutput0 = 0.000000
+					m_flOutput1 = 1.000000
+					m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+					m_flBiasParameter = 0.000000
+					m_Curve = 
+					{
+						m_spline = 
+						[
+						]
+						m_tangents = 
+						[
+						]
+						m_vDomainMins = 
+						[
+							0.000000,
+							0.000000,
+						]
+						m_vDomainMaxs = 
+						[
+							0.000000,
+							0.000000,
+						]
+					}
+				}
+				m_FloatInterp = 
+				{
+					m_nType = "PF_TYPE_PARTICLE_NUMBER_NORMALIZED"
+					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_flLiteralValue = 0.000000
+					m_nControlPoint = 0
+					m_nScalarAttribute = 3
+					m_nVectorAttribute = 6
+					m_nVectorComponent = 0
+					m_flRandomMin = 0.000000
+					m_flRandomMax = 1.000000
+					m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+					m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+					m_flMultFactor = 1.000000
+					m_flInput0 = 0.000000
+					m_flInput1 = 1.000000
+					m_flOutput0 = 0.000000
+					m_flOutput1 = 1.000000
+					m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+					m_flBiasParameter = 0.000000
+					m_Curve = 
+					{
+						m_spline = 
+						[
+						]
+						m_tangents = 
+						[
+						]
+						m_vDomainMins = 
+						[
+							0.000000,
+							0.000000,
+						]
+						m_vDomainMaxs = 
+						[
+							0.000000,
+							0.000000,
+						]
+					}
+				}
+				m_flInterpInput0 = 0.000000
+				m_flInterpInput1 = 1.000000
+				m_vInterpOutput0 = 
+				[
+					0.000000,
+					0.000000,
+					0.000000,
+				]
+				m_vInterpOutput1 = 
+				[
+					1.000000,
+					1.000000,
+					1.000000,
+				]
+				m_Gradient = 
+				{
+					m_Stops = 
+					[
+						
+						{
+							m_flPosition = 0.173000
+							m_Color = 
+							[
+								179,
+								103,
+								255,
+								255,
+							]
+						},
+						
+						{
+							m_flPosition = 1.000000
+							m_Color = 
+							[
+								69,
+								8,
+								103,
+								255,
+							]
+						},
+					]
+				}
+			}
+			m_Lerp = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_NUMBER_NORMALIZED"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 1.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.000000
+							y = 0.000000
+							m_flSlopeIncoming = 10.000000
+							m_flSlopeOutgoing = 10.000000
+						},
+						
+						{
+							x = 1.000000
+							y = 10.000000
+							m_flSlopeIncoming = 10.000000
+							m_flSlopeOutgoing = 10.000000
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						1.000000,
+						10.000000,
+					]
+				}
+			}
+		},
+		
+		{
+			_class = "C_OP_CycleScalar"
+			m_flStartValue = 0.500000
+			m_flCycleTime = 1.500000
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		
+		{
+			_class = "C_OP_SpinUpdate"
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_CreateSequentialPathV2"
+			m_flNumToAssign = 10.000000
+			m_PathParams = 
+			{
+				m_nEndControlPointNumber = 3
+			}
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_NUMBER_NORMALIZED"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 0.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.000000
+							y = 0.000000
+							m_flSlopeIncoming = 1.479675
+							m_flSlopeOutgoing = 1.479675
+						},
+						
+						{
+							x = 0.182022
+							y = 0.269333
+							m_flSlopeIncoming = 0.468676
+							m_flSlopeOutgoing = 0.468676
+						},
+						
+						{
+							x = 0.625978
+							y = 0.293381
+							m_flSlopeIncoming = 0.000000
+							m_flSlopeOutgoing = 0.000000
+						},
+						
+						{
+							x = 1.000000
+							y = 0.269333
+							m_flSlopeIncoming = -0.064295
+							m_flSlopeOutgoing = -0.064295
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						1.000000,
+						0.500000,
+					]
+				}
+			}
+			m_nOutputField = "7"
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMin = 225.000000
+			m_flRadiusMax = 225.000000
+		},
+		
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_PARTICLE_NUMBER_NORMALIZED"
+				m_nMapType = "PF_MAP_TYPE_CURVE"
+				m_flLiteralValue = 0.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+						
+						{
+							x = 0.000000
+							y = 0.817619
+							m_flSlopeIncoming = -0.474295
+							m_flSlopeOutgoing = -0.474295
+						},
+						
+						{
+							x = 0.446176
+							y = 0.606000
+							m_flSlopeIncoming = -0.327048
+							m_flSlopeOutgoing = -0.327048
+						},
+						
+						{
+							x = 1.000000
+							y = 0.490571
+							m_flSlopeIncoming = -0.208421
+							m_flSlopeOutgoing = -0.208421
+						},
+					]
+					m_tangents = 
+					[
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+						
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_SPLINE"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						1.000000,
+						1.000000,
+					]
+				}
+			}
+			m_nSetMethod = "PARTICLE_SET_SCALE_CURRENT_VALUE"
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 10.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+					]
+					m_tangents = 
+					[
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.000000,
+						0.000000,
+					]
+				}
+			}
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_nFirstMultipleOverride_BackwardCompat = 2
+	m_flConstantRadius = 200.000000
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

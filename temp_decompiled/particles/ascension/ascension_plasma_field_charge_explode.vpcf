@@ -1,0 +1,129 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_ConstantColor = 
+	[
+		209,
+		146,
+		215,
+		255,
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_ground.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_warp.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_glow.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_ring_large_c.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_ring_large_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_ring_large.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_bloom.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_bloom_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_electricity.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_sphere.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_electricity_expand.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_smoke.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_smoke_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_smoke_expand.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_light_explode.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_post_displacement.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.100000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.120000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.150000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.170000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.200000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.200000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.160000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+		
+		{
+			m_flDelay = 0.180000
+			m_ChildRef = resource:"particles/ascension/ascension_plasma_field_charge_lightning_large_parent.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 10
+}

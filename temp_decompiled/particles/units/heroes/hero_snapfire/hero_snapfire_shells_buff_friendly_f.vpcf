@@ -1,0 +1,355 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 120
+	m_flConstantRadius = 60.000000
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderTrails"
+			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
+			m_bAdditive = true
+			m_flOverbrightFactor = 5.000000
+			m_hTexture = resource:"materials/particle/smoke/steam/steam.vtex"
+			m_flAnimationRate = 1.000000
+			m_flLengthFadeInTime = 2.000000
+			m_flMaxLength = 500.000000
+			m_bIgnoreDT = true
+			m_flFinalTextureScaleV = -1.000000
+			m_flFinalTextureOffsetV = 1.000000
+			m_nHSVShiftControlPoint = 62
+			m_flRadiusScale = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.500000
+			}
+			m_vecTailColorScale = 
+			{
+				m_nType = "PVEC_TYPE_LITERAL"
+				m_vLiteralValue = 
+				[
+					0.000000,
+					2.000000,
+					2.000000,
+				]
+			}
+			m_bDisableOperator = true
+			m_flMinLength = 175.000000
+		},
+		
+		{
+			_class = "C_OP_RenderTrails"
+			m_flMaxLength = 500.000000
+			m_flMinLength = 175.000000
+			m_bIgnoreDT = true
+			m_flLengthFadeInTime = 2.000000
+			m_vecTailColorScale = 
+			{
+				m_nType = "PVEC_TYPE_LITERAL"
+				m_vLiteralValue = 
+				[
+					0.000000,
+					2.000000,
+					2.000000,
+				]
+			}
+			m_flRadiusScale = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.500000
+			}
+			m_flFinalTextureScaleV = -1.000000
+			m_flFinalTextureOffsetV = 1.000000
+			m_flAnimationRate = 1.000000
+			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
+			m_flAddSelfAmount = 1.000000
+			m_bAdditive = true
+			m_flOverbrightFactor = 4.000000
+			m_hTexture = resource:"materials/particle/smoke/steam/steam.vtex"
+			m_nHSVShiftControlPoint = 62
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndScale = 0.000000
+			m_flBias = 0.250000
+		},
+		
+		{
+			_class = "C_OP_RampScalarLinearSimple"
+			m_flEndTime = 99999.000000
+			m_Rate = -8.000000
+			m_nField = "16"
+			m_nOpEndCapState = 1
+		},
+		
+		{
+			_class = "C_OP_LockToBone"
+			m_HitboxSetName = "hands"
+			m_bDisableOperator = true
+		},
+		
+		{
+			_class = "C_OP_PositionLock"
+		},
+		
+		{
+			_class = "C_OP_Decay"
+		},
+		
+		{
+			_class = "C_OP_FadeInSimple"
+		},
+		
+		{
+			_class = "C_OP_OscillateVector"
+			m_nField = "2"
+			m_RateMin = 
+			[
+				-32.000000,
+				-32.000000,
+				-32.000000,
+			]
+			m_RateMax = 
+			[
+				32.000000,
+				32.000000,
+				32.000000,
+			]
+			m_FrequencyMax = 
+			[
+				3.000000,
+				3.000000,
+				3.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.750000
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMax = 2.000000
+			m_fLifetimeMin = 1.500000
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+			m_fRadiusMin = 40.000000
+			m_fRadiusMax = 40.000000
+			m_vecDistanceBias = 
+			[
+				1.000000,
+				1.000000,
+				0.000000,
+			]
+			m_nControlPointNumber = 5
+		},
+		
+		{
+			_class = "C_INIT_PositionOffset"
+			m_OffsetMin = 
+			[
+				0.000000,
+				0.000000,
+				-50.000000,
+			]
+			m_OffsetMax = 
+			[
+				0.000000,
+				0.000000,
+				-50.000000,
+			]
+			m_nControlPointNumber = 5
+		},
+		
+		{
+			_class = "C_INIT_CreateOnModel"
+			m_HitboxSetName = "guns"
+			m_vecDirectionBias = 
+			[
+				0.000000,
+				0.000000,
+				1.000000,
+			]
+			m_bDisableOperator = true
+		},
+		
+		{
+			_class = "C_INIT_RandomTrailLength"
+			m_flMaxLength = 0.250000
+		},
+		
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 1
+		},
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = 
+			[
+				190,
+				82,
+				0,
+				255,
+			]
+			m_ColorMax = 
+			[
+				255,
+				63,
+				0,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMin = 75.000000
+			m_flRadiusMax = 128.000000
+		},
+		
+		{
+			_class = "C_INIT_OffsetVectorToVector"
+			m_nFieldOutput = "2"
+			m_vecOutputMin = 
+			[
+				0.000000,
+				0.000000,
+				2200.000000,
+			]
+			m_vecOutputMax = 
+			[
+				0.000000,
+				0.000000,
+				3000.000000,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_nMapType = "PF_MAP_TYPE_DIRECT"
+				m_flLiteralValue = 40.000000
+				m_nControlPoint = 0
+				m_nScalarAttribute = 3
+				m_nVectorAttribute = 6
+				m_nVectorComponent = 0
+				m_flRandomMin = 0.000000
+				m_flRandomMax = 1.000000
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_nInputMode = "PF_INPUT_MODE_CLAMPED"
+				m_flMultFactor = 1.000000
+				m_flInput0 = 0.000000
+				m_flInput1 = 1.000000
+				m_flOutput0 = 0.000000
+				m_flOutput1 = 1.000000
+				m_nBiasType = "PF_BIAS_TYPE_STANDARD"
+				m_flBiasParameter = 0.000000
+				m_Curve = 
+				{
+					m_spline = 
+					[
+					]
+					m_tangents = 
+					[
+					]
+					m_vDomainMins = 
+					[
+						0.000000,
+						0.000000,
+					]
+					m_vDomainMaxs = 
+					[
+						0.000000,
+						0.000000,
+					]
+				}
+			}
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_nFirstMultipleOverride_BackwardCompat = 6
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 62
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 5
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

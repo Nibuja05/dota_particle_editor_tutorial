@@ -1,0 +1,111 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_flNoDrawTimeToGoToSleep = 12.000000
+	m_bShouldSort = false
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_decal.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_ice_mist.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_ice_smoke.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_flash.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_ground_glow.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_ring.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_lenslfare.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_sphere.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/aghanim_crystal_attack_impact_shards.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						1.000000,
+						1.000000,
+						1.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

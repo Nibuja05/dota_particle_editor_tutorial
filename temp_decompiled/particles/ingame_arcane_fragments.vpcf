@@ -1,0 +1,55 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/ingame_arcane_fragments_a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ingame_arcane_fragments_b.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/ingame_arcane_fragments_c.vpcf"
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_entityName = "parent"
+					m_attachmentName = "attach_particle"
+					m_vecOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+					m_angOffset = 
+					[
+						null,
+						null,
+						null,
+					]
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/ui/compendium_points/compendium_points_24levels.vmdl"
+				m_materialGroupName = "ti10"
+			}
+		},
+	]
+	m_nBehaviorVersion = 10
+}

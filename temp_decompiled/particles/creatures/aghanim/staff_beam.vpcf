@@ -1,0 +1,217 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{36c3961f-02a4-4c52-bf8f-6e3147d7d142} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_flConstantRadius = 50.000000
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.050000
+		},
+		
+		{
+			_class = "C_OP_Decay"
+			m_nOpEndCapState = 1
+		},
+		
+		{
+			_class = "C_OP_SetChildControlPoints"
+			m_nFirstControlPoint = 3
+		},
+		
+		{
+			_class = "C_OP_RemapCPVisibilityToScalar"
+			m_nControlPoint = 1
+			m_flInputMax = 0.010000
+			m_nFieldOutput = "16"
+		},
+		
+		{
+			_class = "C_OP_PositionLock"
+			m_nControlPointNumber = 1
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMax = 1.000000
+			m_fLifetimeMin = 1.000000
+		},
+		
+		{
+			_class = "C_INIT_CreateWithinSphere"
+			m_nControlPointNumber = 1
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_beam.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_energy.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_tgt.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_mane.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_flare.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_ripple.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_source.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/creatures/aghanim/staff_beam_source_glow.vpcf"
+		},
+	]
+	m_PreEmissionOperators = 
+	[
+		
+		{
+			_class = "C_OP_SetSingleControlPointPosition"
+			m_nCP1 = 4
+			m_vecCP1Pos = 
+			[
+				0.000000,
+				0.000000,
+				0.000000,
+			]
+		},
+		
+		{
+			_class = "C_OP_SetCPOrientationToPointAtCP"
+			m_nOutputCP = 4
+		},
+	]
+	m_nBehaviorVersion = 10
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 9
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 4
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_angOffset = 
+					[
+						0.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}
