@@ -68,6 +68,8 @@ By clicking on the colored icon to the right of the arrow, you can directly infl
 <h2 id="functions-1">Functions</h2>
 <p>Now that you have learned the general handling of the tool, we can start to take a closer look at the functions that make every effect work. Functions are divided into different groups, that will be explained here. You can find a complete list of all functions with their usage here: <a href="./Function%20Library.md">Functions Library</a><br>
 To add a function to one of these groups, just click the plus icon and choose an element from the list. You can also select multiple functions with <strong>ctrl</strong> or <strong>shift</strong> and copy, cut and paste with knows shortcuts (<em>ctrl + c, ctrl + x, ctrl + v</em>). These actions work accross multiple particle effects.</p>
+<p><strong>Other important note:</strong><br>
+All Functions are priority-based. Sometimes two identical Functions work together, but sometimes only one of them can be active. In this case, or when two Functions have a similiar use case, only the last added one will be active. So Functions at the bottom of a group have the highest priority.</p>
 <h3 id="base-properties">Base Properties</h3>
 <p>The base properties hold every information about the effect, including all other groups. In addition, both initial and other important values can be found here. Some initial values that can be set here are explained below. These are attributes that are tied to every single particle in your effect and independant from each other</p>
 <ul>
@@ -76,7 +78,8 @@ To add a function to one of these groups, just click the plus icon and choose an
 <li><code>lifetime</code> -  this is the time in seconds, your particle will be alive, means it will be destroyed after this time.</li>
 <li>others</li>
 </ul>
-<p>One of the most important fields here is <code>max particles</code> which is a hard cap to the number of particles maximal allowed for this effect (excluding child effects).</p>
+<p>These attributes will be overwritten, if they’re changed somewhere else in the effect.<br>
+Also one of the most important fields here is <code>max particles</code> which is a hard cap to the number of particles maximal allowed for this effect (excluding child effects).</p>
 <h3 id="emitter">Emitter</h3>
 <p>Emitters are functions that can generate particles. They can therefore be found in almost every effect. Normally it is sufficient to use one kind of emitter. The most commonly used emitters among them are:</p>
 <ul>
@@ -89,25 +92,30 @@ Often Initializers are used to set some randomized initial values:</p>
 <ul>
 <li><code>Lifetime random</code> - sets the lifetime of the spawned particle to a random value between <code>lifetime min</code> and <code>lifetime max</code>. (<a href="./Function%20Library.md#lifetime-random">Library</a>)</li>
 <li><code>Radius random</code> - sets the radius of the spawned particle to a random value between <code>radius min</code> and <code>radius max</code>. (<a href="./Function%20Library.md#radius-random">Library</a>)</li>
-<li><code>Rotation random</code> - randomizes the initial rotation of the particle between <code>yaw offset min</code> and <code>yaw offset max</code> plus <code>yaw initial</code> on top of that. Mostly <code>Roll</code> is the important field important for basic sprites. <code>randomly flip direction</code> can be checked to treat the min and max value, as if they were negated. (<a href="./Function%20Library.md#rotation-random">Library</a>)</li>
+<li><code>Rotation random</code> - randomizes the initial rotation of the particle between <code>yaw offset min</code> and <code>yaw offset max</code> plus <code>yaw initial</code> on top of that. Mostly <code>Roll</code> is the important field important for basic sprites. <code>randomly flip direction</code> can be checked to treat the min and max value, as if they were negated. (<a href="./Function%20Library.md#rotation-random">Library</a>)<br>
+<em>More information about rotations here: <a href="./Tutorials/Rotation%20Guide.md">Rotations Guide</a></em></li>
 <li><code>Color Random</code> - sets the inital color to a random vector between <code>color 1</code> and <code>color 2</code>. Ignore all other fields for now, they are rarely used. (<a href="./Function%20Library.md#color-random">Library</a>)</li>
+<li><code>Alpha random</code> - sets the alpha value randomly between <code>alpha min</code> and <code>alpha max</code>. (<a href="./Function%20Library.md#alpha-random">Library</a>)</li>
 </ul>
+<p><em>Note: alpha is a value, that describes how transparent a particle is. 0 means comepletly transparent and 255 is completly solid.</em></p>
 <p>Besides these random value Initializers, the positional Initializers are the most important one. They determine where a particle is going to spawn. Also they have a lot of fields for adjustments, the basics will be explained below:</p>
 <ul>
-<li>
-<p><code>Position within sphere random</code> - most used positional Initializer. Places new particles at a random position within a given radius around the center control point, which can be set with <code>control point number</code>. The distance for each particle is chosen randomly between <code>distance min</code> and <code>distance max</code>.  Also use this Initializer to place a particle at an exact position and just leave both distance values to 0. For more information about the other fields, lookup (<a href="./Function%20Library.md#position-within-sphere-random">Library</a>)</p>
-</li>
-<li>
-<p><code>Position along Ring</code> - second most used positional initializer. Places new particles along a ring with a radius that can be set in <code>initial radius</code>. With a <code>thickness</code> greater than 0, the particles are randomly placed in a distance &lt; <code>thickness</code> around the “normal” ring position. Particles are randomly distrubuted around the ring. If you want to change this, check <code>even distribution</code>. This option forces all particles to spawn evenly spaced along the ring. With <code>even distribution count</code> you can control, how many particles are needed to place a full ring, otherwise (-1) they are spread based on the total particle count. (<a href="./Function%20Library.md#position-along-ring">Library</a>)</p>
-</li>
-<li>
-<p><code>Position on path sequential</code> - Places new particles along a path between two control points. Therefor this initializer is often used for ropes, chains, etc. <code>start control point number</code> and <code>end control point number</code> define where particles are placed. <code>particles to map from start to end</code> is the number of particles needed to fill the path and <code>maximum distance</code> limits the length of the path, should the two CPs be too far away from each other. <code>use sequential CP pairs between start and end point</code> uses all CP numbers between your start and end as well, so it can be used to draw shapes like a square (with start, end, and 2 in between). (<a href="./Function%20Library.md#position-along-path-sequential">Library</a>)</p>
-</li>
+<li><code>Position within sphere random</code> - most used positional Initializer. Places new particles at a random position within a given radius around the center control point, which can be set with <code>control point number</code>. The distance for each particle is chosen randomly between <code>distance min</code> and <code>distance max</code>.  The Initializer can also be used to place a particle at an exact position by leaving both distance values to 0. For more information about the other fields, lookup (<a href="./Function%20Library.md#position-within-sphere-random">Library</a>)</li>
 </ul>
-<p>There are more positional Initializer, but they are mostly very specific and therefor explained when needed. However theres one more Initializer that is quite commonly used to place particles:</p>
+<p><em>Usage: this Initializer can be used, whenever you simply want to place a particle at a CP position. But it’s also very useful to fill a whole sphere with particles.</em></p>
+<ul>
+<li><code>Position along Ring</code> - second most used positional initializer. Places new particles along a ring with a radius that can be set in <code>initial radius</code>. With a <code>thickness</code> greater than 0, the particles are randomly placed in a distance &lt; <code>thickness</code> around the “normal” ring position. Particles are randomly distrubuted around the ring. If you want to change this, check <code>even distribution</code>. This option forces all particles to spawn evenly spaced along the ring. With <code>even distribution count</code> you can control, how many particles are needed to place a full ring, otherwise (-1) they are spread based on the total particle count. (<a href="./Function%20Library.md#position-along-ring">Library</a>)</li>
+</ul>
+<p><em>Usage: this Initializer is mostly used to create closed rings of particles, for example for a ring wave that travels outwards. It can be also very useful for spirals.</em></p>
+<ul>
+<li><code>Position on path sequential</code> - Places new particles along a path between two control points. Therefore this initializer is often used for ropes, chains, etc. <code>start control point number</code> and <code>end control point number</code> define where particles are placed. <code>particles to map from start to end</code> is the number of particles needed to fill the path and <code>maximum distance</code> limits the length of the path, should the two CPs be too far away from each other. <code>use sequential CP pairs between start and end point</code> uses all CP numbers between your start and end as well, so it can be used to draw shapes like a square (with start, end, and 2 in between). (<a href="./Function%20Library.md#position-along-path-sequential">Library</a>)</li>
+</ul>
+<p><em>Usage: most used for beams (like a laser), lightnings or chains, but can be also used to position particles along shapes, like triangles or rectangles.</em></p>
+<p>There are more positional Initializer, but they are mostly very specific and therefore explained when needed. However theres one more Initializer that is quite commonly used to place particles:</p>
 <ul>
 <li><code>Position modify offset random</code> - instead of spawning the particle at it’s position defined by a positional Initializer, the particles spawns in a random position around this point. <code>offset min</code> and <code>offset max</code> define the box where the particles are allowed to spawn in. (<a href="./Function%20Library.md#position-modify-offset-random">Library</a>)</li>
 </ul>
+<p><em>Usage: similiar to ‘Position within sphere random’, but with a box instead of a sphere. While only one positional Initializer can be used, this one can be added on top of everything else.</em></p>
 <p>Another important use of Initializers are velocity generators. These can give particles a moving direction directly after they spawned. Velocity and movement in general are explained later.</p>
 <h3 id="operator">Operator</h3>
 <p>Operators are functions that have a persistent effect on all particles as long as they are alive. Together with Initializers, they create the main functionality of any effect.</p>
@@ -121,7 +129,7 @@ Often Initializers are used to set some randomized initial values:</p>
 <p>All other decay operators have very specific use cases and will be explained as they are needed.</p>
 <p>The next group of important operators are fades. They can have a great effect with little effort and are commonly used.</p>
 <ul>
-<li><code>Alpha fade in simple</code> - set’s the particles alpha value to 0 and increases it until it reaches the initial alpha value. The duration it takes can be defined in <code>proportional fade in time</code>, which is based on the particles lifetime. (<a href="./Function%20Library.md#alpha-fade-in-simple">Library</a>)</li>
+<li><code>Alpha fade in simple</code> - sets the particles alpha value to 0 and increases it until it reaches the initial alpha value. The duration it takes can be defined in <code>proportional fade in time</code>, which is based on the particles lifetime. (<a href="./Function%20Library.md#alpha-fade-in-simple">Library</a>)</li>
 <li><code>Alpha fade out simple</code> -  same as fade in, but reduces the alpha to 0 at the end of the lifetime. Fade out start time can be set with <code>proportional fade out time</code>.  (<a href="./Function%20Library.md#alpha-fade-out-simple">Library</a>)</li>
 <li><code>Color fade</code> - continiously changes the particles color from its initial color towards <code>color fade</code>. Start and end time can be set with <code>fade start time</code> and <code>fade end time</code>, both are proportional to the particles lifetime. With <code>output field</code>, this operator can also scale other vector attributes of particles (but it’s rarely used).  (<a href="./Function%20Library.md#color-fade">Library</a>)</li>
 <li><code>Radius scale</code> - basically not a fade, but it works similiar. Continously changes the radius of particles based on their lifetime. The scaling starts at <code>start scale</code> and is done at <code>end time</code>. The radius starts with <code>radius start scale</code> - times the initial value and ends with <code>radius end scale</code> - times the intial value. With <code>ease in and out</code> the linear scaling is replaced by a smoothed curve. <code>scale bias</code> also controls the scaling speed. A higher bias value (maximum is 1.0) will make the particles scale faster at the start and then smooth out.  (<a href="./Function%20Library.md#radius-scale">Library</a>)</li>
@@ -135,11 +143,11 @@ Often Initializers are used to set some randomized initial values:</p>
 <li><code>Rotation basic</code> - is needed for most actions that continuously change the rotation (roll, yaw, pitch) of particles. (<a href="./Function%20Library.md#rotation-basic">Library</a>)</li>
 <li><code>Movement basic</code> - is needed for most functions that move particles, like velocities, forces etc. If you’d expect your particles to move, but they don’t, you should check if this operator is already added. It can also apply a gravity-like effect, which can be controlled with <code>gravity</code>. In most cases, only the z-coordinate is used and it can also have negative values. <code>drag</code> is a value, that controls how much your particles are slowed down over time, like friction does. With 0 drag, particles keep going with the same speed forever, a higher drag slows it down over time (1.0 is max). (<a href="./Function%20Library.md#movement-basic">Library</a>)</li>
 </ul>
-<p>There are many more oeprators that are really useful, but the most important ones were explained above. Additional operators will be explained whenever they are used in further tutorials.</p>
+<p>There are many more operators that are really useful, but the most important ones were explained above. Additional operators will be explained whenever they are used in further tutorials.</p>
 <h3 id="force-generator">Force Generator</h3>
 <p>A force generator is a function that applies some kind of force to your particles in order to move them. <code>Movement basic</code> is required to use them. Using these is definatly more advanced at may be not obvious at first, but they can achieve great effects. The most used of them is shortly explained below:</p>
 <ul>
-<li><code>Pull towards control point</code> - constantly applies a force that pulls all particles closer to a given <code>control point number</code>. It can have negative <code>amount of force</code> to have an repulsive effect. This force is constantly added to the current velocity and results in steadily increasing speeds. The <code>falloff</code> power is similar to the drag from movement basic. Since the default value of it is 2, it (nearly) always needs to be redruced to make this force generator working. (<a href="./Function%20Library.md#pull-towards-control-point">Library</a>)</li>
+<li><code>Pull towards control point</code> - constantly applies a force that pulls all particles closer to a given <code>control point number</code>. It can have negative <code>amount of force</code> to have an repulsive effect. This force is constantly added to the current velocity and results in steadily increasing speeds. The <code>falloff</code> power is similar to the drag from movement basic. Since the default value of it is 2, it (nearly) always needs to be reduced to make this force generator working. (<a href="./Function%20Library.md#pull-towards-control-point">Library</a>)</li>
 </ul>
 <h3 id="constraint">Constraint</h3>
 <p>Constraints are the least used functions of all and may also have the biggest performance impact. However they are extremly potent and give access to very useful features. You should therefore only use it if you know exactly what you want to achieve with it. Some of them will be explained in further tutorials.</p>
@@ -148,31 +156,34 @@ Often Initializers are used to set some randomized initial values:</p>
 Renderers can now make these abstract particles visible to us. They decide whether we display single sparks, a long chain or even models. They aren’t necessary for each particle effect, but need to be added on every one that should be visible to user. Normally only one render is used, but there is no limit and multiple ones can be used at the same time, making use of these particle objects described above.</p>
 <p>We’ll have a look at some common Renderers and important attributes of them:</p>
 <ul>
-<li>
-<p><code>Render sprites</code> - most used “basic” Render. Displays a 2D plane with a sprite texture at the particles location, which always faces the camera, this way the effect of an 3D object is achieved.</p>
+<li><code>Render sprites</code> - most used “basic” Render. Displays a 2D plane with a sprite texture at the particles location, which always faces the camera, this way the effect of an 3D object is achieved.
 <ul>
 <li>Further down in the properties, there’s <code>texture</code>, the most important field. If you press the little magnifying glass button, an asset browser window will open to choose a new texture for this sprite.</li>
 <li><code>orientation type</code> sets the facing direction of the sprite. Normally this should be <code>Screen Align</code>, so it’s always facing the camera. But with <code>World-Z Align</code> or <code>Particle Normal Align</code> other effects can be achieved.</li>
-<li><code>Color and alpga adjustments</code> is a collection of settings for color display related stuff and frequently changed. Since this is nearly the same for multiple Renderers, it will be explained later.</li>
+<li><code>Color and alpha adjustments</code> is a collection of settings for color display related stuff and frequently changed. Since this is nearly the same for multiple Renderers, it will be explained later.</li>
 <li><code>Radius Scale</code> multiplies the current radius for this specific sprite. Useful if multiple sprites Renderers are used at the same time.</li>
 <li><code>Alpha Scale</code> is similiar to Radius Scale but for its alpha value.</li>
-<li><code>Color blend</code> changes the color of this sprite (applied after all aother color changes through Initializers and Operators)</li>
+<li><code>Color blend</code> changes the color of this sprite (applied after all other color changes through Initializers and Operators)</li>
 <li>other properties might be explained as they’re needed</li>
 <li>(<a href="./Function%20Library.md#render-sprites">Library</a>)</li>
 </ul>
 </li>
-<li>
-<p><code>Render rope</code> - used to draw a connected stretched texture that connects multiple particle objects. Attributes like radius, color, alpha, etc get interpolated between these points. Very useful for trails, ropes, chains, beams. It will connect in particle order based on particle indeces (can be viewed with the “Visualize” function described at the beginning)</p>
+</ul>
+<p><em>Usage: used for nearly all purposes. Can also be animated, which is often used for flames and explosions.</em></p>
+<ul>
+<li><code>Render rope</code> - used to draw a connected stretched texture that connects multiple particle objects. Attributes like radius, color, alpha, etc get interpolated between these points. Very useful for trails, ropes, chains, beams. It will connect in particle order based on particle indices (can be viewed with the “Visualize” function described at the beginning)
 <ul>
 <li>same as Render sprites in most ways</li>
 <li><code>Closed loop</code> will connect the last with the first particle. Extremly useful in combination with the Position along ring Initializer</li>
-<li><code>Reverse point order</code> will change the connection order from ascending to descending when checked (regarding particle indeces)</li>
+<li><code>Reverse point order</code> will change the connection order from ascending to descending when checked (regarding particle indices)</li>
 <li><code>Texture Coordinates</code> is a collection of settings for displaying the texture, how its stretched etc. Also available on Render sprites, but more commonly used here. <code>texture V World Size</code>controls the stretch factor of the texture, it’s often good to increase this value the texture might feel compressed otherwise. <code>texture V Scroll Rate</code> adds a scrolling effect to the texture and can have great effect when the texture is seamless (and be more efficient than moving the particles)</li>
 <li>(<a href="./Function%20Library.md#render-rope">Library</a>)</li>
 </ul>
 </li>
-<li>
-<p><code>Render models</code> - renderes a model at the particle positions. use it for small particle numbers. The models rendered are displayed but can’t be interacted with, so they can’t be selected, have no hitbox etc. However the behave visually the same as real world object, so they can be lighted and cast shadows.</p>
+</ul>
+<p><em>Usage: used for rings, lightnings or other beams. May also be used to create ground effects that follow a path.</em></p>
+<ul>
+<li><code>Render models</code> - renders a model at the particle positions. Use it for small particle numbers. The models rendered are displayed but can’t be interacted with, so they can’t be selected, have no hitbox etc. However they behave visually the same as real world object, so they can be lighted and cast shadows.
 <ul>
 <li>some fields from Render sprites can also be found here</li>
 <li><code>models</code> is a list of models that are rendered. Empty on default, you can add new models by clicking on the + icon, expand the view and select a model in the opening asset browser.</li>
@@ -184,10 +195,10 @@ Renderers can now make these abstract particles visible to us. They decide wheth
 </ul>
 </li>
 </ul>
+<p><em>Usage: used for everything that can’t be done with other Renderers. Especially with animations, the possibilities are nearly endless.</em></p>
 <p>Important Note: Only one of these Renderers can be active per particle effect. If you want to have multiple models rendered, use multiple effects or add multiple models in the models field.</p>
 <ul>
-<li>
-<p><code>Render sprite trail</code> - similar to a sprite in behavior, but dependend on the particle velocity. Note that particles might be invisible if you first add this Renderer as long as your particles don’t move. More speed of a particle stretches the lengh of the selected texture. They are very useful for trails (surprise!), but also streaks and other creative applications. They typically require the <code>trail length</code> property for the particles.</p>
+<li><code>Render sprite trail</code> - similar to a sprite in behavior, but depends on the particle velocity. Note that particles might be invisible if you first add this Renderer as long as your particles don’t move. More speed of a particle stretches the lengh of the selected texture. They are very useful for trails (surprise!), but also streaks and other creative applications. They typically require the <code>trail length</code> property for the particles.
 <ul>
 <li>mostly same as Render sprites</li>
 <li><code>max length</code> is the maximum stretch length</li>
@@ -197,22 +208,25 @@ Renderers can now make these abstract particles visible to us. They decide wheth
 <li>(<a href="./Function%20Library.md#render-sprite-trail">Library</a>)</li>
 </ul>
 </li>
-<li>
-<p><code>Render deferred light</code> - renders a light source that casts a colored light around the particles. As it is only deferred light, no shadows will be casted. (<a href="./Function%20Library.md#render-deferred-light">Library</a>)</p>
-</li>
-<li>
-<p><code>Render projected</code> -  renders a material on other objects like ground, trees etc. Will most likely be invisible in the Particle Editor, to avoid that go to the Controls Panel and clock on the “Browse” button in the center to select a model (it’s often useful to search for “ground” and select a plane model). Note here also that in contrast to all other texture based renderes this renderer requires a material (.vtex &lt;-&gt; .vmat). (<a href="./Function%20Library.md#render-projected">Library</a>)</p>
-</li>
 </ul>
+<p><em>Usage: mostly used as trails, they often work together with normal sprites. Can also be very handy to position sprites in 3D space more easily.</em></p>
+<ul>
+<li><code>Render deferred light</code> - renders a light source that casts a colored light around the particles. As it is only deferred light, no shadows will be casted. (<a href="./Function%20Library.md#render-deferred-light">Library</a>)</li>
+</ul>
+<p><em>Note: deferred light is a performance-oriented lighting method. It will light/color all nearby objects based on their normal. This light does not cast shadows and lights objects behind other objects.</em></p>
+<ul>
+<li><code>Render projected</code> -  renders a material on other objects like ground, trees etc. Will most likely be invisible in the Particle Editor, to avoid that go to the Controls Panel and click on the “Browse” button in the center to select a model (it’s often useful to search for “ground” and select a plane model). Note here also that in contrast to all other texture based renders this renderer requires a material (.vtex &lt;-&gt; .vmat). (<a href="./Function%20Library.md#render-projected">Library</a>)</li>
+</ul>
+<p><em>Usage: used for ground effects like stomps, cracks, or frozen ground. Can also affect other models, which is especially useful for burn marks.</em></p>
 <p>There are more renderers, but these were the most common ones.</p>
 <h3 id="pre-emission-operator">Pre Emission Operator</h3>
 <p>Under this category are operators, that are evaluated before all other Functions. They often manipulate CPs, manipulate children, etc. You won’t need them for most particle effects, but they can be a great addition and are vital for some complex particle behavior.</p>
 <p>As most of them have pretty specific use cases, only the most common one will be explained right here:</p>
 <ul>
-<li><code>Set single control point position</code> - copies the coordinated of another control point to a new one. The new one can have an offset to the original one, described in <code>control point location</code>. This offset respects the orientation of the original control point and therefor is in local space. If you want to prevent this, check <code>set positions in world space</code>. The new CP will be continously recalculated when the original CP changes. If you want to prevent this, check <code>only set position once</code>. (<a href="./Function%20Library.md#set-single-control-point">Library</a>)</li>
+<li><code>Set single control point position</code> - copies the coordinated of another control point to a new one. The new one can have an offset to the original one, described in <code>control point location</code>. This offset respects the orientation of the original control point and therefore is in local space. If you want to prevent this, check <code>set positions in world space</code>. The new CP will be continously recalculated when the original CP changes. If you want to prevent this, check <code>only set position once</code>. (<a href="./Function%20Library.md#set-single-control-point">Library</a>)</li>
 <li><code>Set control point positions</code> -  basically the same as above, but can do 4 new CPs at once. (<a href="./Function%20Library.md#set-control-point-positions">Library</a>)</li>
 </ul>
-<p>Be aware that  when a control point is set by one of these Pre Emission Operators, they will be grayed out in the Controls Panel and cannot be changed manually anymore.</p>
+<p>Be aware that  when a control point is set by one of these Pre Emission Operators, they will be grayed out in the Controls Panel and cannot be changed manually anymore. They also can’t be changed <code>SetParticleControl</code> from the code or any other methods. So these CPs will be only used internally.</p>
 <h2 id="what-now">What now?</h2>
 <p>Now you should a basic understanding of the differences of the different Functions. But theres far more to learn that wasn’t covered here.</p>
 <p>Now you could go and explore the Asset Browser, look up different particle effects, try to understand them and experiment as much as you like.</p>
