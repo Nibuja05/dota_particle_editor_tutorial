@@ -5,7 +5,9 @@
 
 <p>back to the <a href="./README.md">Overview</a>.</p>
 <h1 id="particle-editor-guide">Particle Editor Guide</h1>
-<h2 id="contents">Contents</h2>
+<p>Welcome to the <strong>Particle Editor Guide</strong>.<br>
+This guide will help you to get into touch with the editor and explain the basic functionality of particle effects. No matter if you’re a complete beginner or had already some contact with the editor, here’s the best place to start!</p>
+<h2 id="content">Content</h2>
 <ul>
 <li><a href="#the-tool">The Tool</a>
 <ul>
@@ -14,14 +16,22 @@
 <li><a href="#functions">Functions</a></li>
 <li><a href="#properties">Properties</a></li>
 <li><a href="#controls">Controls</a></li>
+<li><a href="#current-assets">Current Assets</a></li>
 </ul>
 </li>
 <li><a href="#functions-1">Functions</a>
 <ul>
 <li><a href="#base-properties">Base Properties</a></li>
 <li><a href="#emitter">Emitter</a></li>
+<li><a href="#initializer">Initializer</a></li>
+<li><a href="#operator">Operator</a></li>
+<li><a href="#force-generator">Force Generator</a></li>
+<li><a href="#constraint">Constraint</a></li>
+<li><a href="#renderer">Renderer</a></li>
+<li><a href="#pre-emission-operator">Pre Emission Operator</a></li>
 </ul>
 </li>
+<li><a href="#what-now">What’s Next</a></li>
 </ul>
 <h2 id="the-tool">The Tool</h2>
 <p>(<a href="https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Particles/Particle_Editor">Valves official documentation of the Tool</a>)</p>
@@ -130,9 +140,82 @@ Often Initializers are used to set some randomized initial values:</p>
 <p>A force generator is a function that applies some kind of force to your particles in order to move them. <code>Movement basic</code> is required to use them. Using these is definatly more advanced at may be not obvious at first, but they can achieve great effects. The most used of them is shortly explained below:</p>
 <ul>
 <li><code>Pull towards control point</code> - constantly applies a force that pulls all particles closer to a given <code>control point number</code>. It can have negative <code>amount of force</code> to have an repulsive effect. This force is constantly added to the current velocity and results in steadily increasing speeds. The <code>falloff</code> power is similar to the drag from movement basic. Since the default value of it is 2, it (nearly) always needs to be redruced to make this force generator working.</li>
+<li>(<a href="./Function%20Library.md#pull-towards-control-point">Library</a>)</li>
 </ul>
 <h3 id="constraint">Constraint</h3>
 <p>Constraints are the least used functions of all and may also have the biggest performance impact. However they are extremly potent and give access to very useful features. You should therefore only use it if you know exactly what you want to achieve with it. Some of them will be explained in further tutorials.</p>
 <h3 id="renderer">Renderer</h3>
-<p>coming soon!</p>
+<p>All other functions we looked at earlier had an influence on invisible abstract particles, which are objects with properties like position, size, color etc.<br>
+Renderers can now make these abstract particles visible to us. They decide whether we display single sparks, a long chain or even models. They aren’t necessary for each particle effect, but need to be added on every one that should be visible to user. Normally only one render is used, but there is no limit and multiple ones can be used at the same time, making use of these particle objects described above.</p>
+<p>We’ll have a look at some common Renderers and important attributes of them:</p>
+<ul>
+<li>
+<p><code>Render sprites</code> - most used “basic” Render. Displays a 2D plane with a sprite texture at the particles location, which always faces the camera, this way the effect of an 3D object is achieved.</p>
+<ul>
+<li>Further down in the properties, there’s <code>texture</code>, the most important field. If you press the little magnifying glass button, an asset browser window will open to choose a new texture for this sprite.</li>
+<li><code>orientation type</code> sets the facing direction of the sprite. Normally this should be <code>Screen Align</code>, so it’s always facing the camera. But with <code>World-Z Align</code> or <code>Particle Normal Align</code> other effects can be achieved.</li>
+<li><code>Color and alpga adjustments</code> is a collection of settings for color display related stuff and frequently changed. Since this is nearly the same for multiple Renderers, it will be explained later.</li>
+<li><code>Radius Scale</code> multiplies the current radius for this specific sprite. Useful if multiple sprites Renderers are used at the same time.</li>
+<li><code>Alpha Scale</code> is similiar to Radius Scale but for its alpha value.</li>
+<li><code>Color blend</code> changes the color of this sprite (applied after all aother color changes through Initializers and Operators)</li>
+<li>other properties might be explained as they’re needed</li>
+<li>(<a href="./Function%20Library.md#render-sprites">Library</a>)</li>
+</ul>
+</li>
+<li>
+<p><code>Render rope</code> - used to draw a connected stretched texture that connects multiple particle objects. Attributes like radius, color, alpha, etc get interpolated between these points. Very useful for trails, ropes, chains, beams. It will connect in particle order based on particle indeces (can be viewed with the “Visualize” function described at the beginning)</p>
+<ul>
+<li>same as Render sprites in most ways</li>
+<li><code>Closed loop</code> will connect the last with the first particle. Extremly useful in combination with the Position along ring Initializer</li>
+<li><code>Reverse point order</code> will change the connection order from ascending to descending when checked (regarding particle indeces)</li>
+<li><code>Texture Coordinates</code> is a collection of settings for displaying the texture, how its stretched etc. Also available on Render sprites, but more commonly used here. <code>texture V World Size</code>controls the stretch factor of the texture, it’s often good to increase this value the texture might feel compressed otherwise. <code>texture V Scroll Rate</code> adds a scrolling effect to the texture and can have great effect when the texture is seamless (and be more efficient than moving the particles)</li>
+<li>(<a href="./Function%20Library.md#render-rope">Library</a>)</li>
+</ul>
+</li>
+<li>
+<p><code>Render models</code> - renderes a model at the particle positions. use it for small particle numbers. The models rendered are displayed but can’t be interacted with, so they can’t be selected, have no hitbox etc. However the behave visually the same as real world object, so they can be lighted and cast shadows.</p>
+<ul>
+<li>some fields from Render sprites can also be found here</li>
+<li><code>models</code> is a list of models that are rendered. Empty on default, you can add new models by clicking on the + icon, expand the view and select a model in the opening asset browser.</li>
+<li><code>material override</code> replaces the material the model uses with another one.</li>
+<li><code>ignore normal</code> is the easiest solution to position your model upright if its lying on its side. Use this only if you don’t want to make further rotations with the model.</li>
+<li><code>animated</code> can be checked to enable animations for the rendered model. A lot of other properties are tied to this setting. Will be explained more detailed later.</li>
+<li><code>disable shadows</code> can be checked to disable shadows for this model</li>
+<li>(<a href="./Function%20Library.md#render-models">Library</a>)</li>
+</ul>
+</li>
+</ul>
+<p>Important Note: Only one of these Renderers can be active per particle effect. If you want to have multiple models rendered, use multiple effects or add multiple models in the models field.</p>
+<ul>
+<li>
+<p><code>Render sprite trail</code> - similar to a sprite in behavior, but dependend on the particle velocity. Note that particles might be invisible if you first add this Renderer as long as your particles don’t move. More speed of a particle stretches the lengh of the selected texture. They are very useful for trails (surprise!), but also streaks and other creative applications. They typically require the <code>trail length</code> property for the particles.</p>
+<ul>
+<li>mostly same as Render sprites</li>
+<li><code>max length</code> is the maximum stretch length</li>
+<li><code>min length</code> is the minimum stretch length</li>
+<li><code>head / tail ...</code> color, alpha, radius scale for only this particle like in Render sprites. However can be seperatly set for the head and tail of the trail (interpolated in between).</li>
+<li><code>ignore delta time</code> can be checked to simulate sprite trails velocity without actually moving them. Can be activated on most velocity Operators and Initializers as well (no Movement basic needed in this case).</li>
+<li>(<a href="./Function%20Library.md#render-sprite-trail">Library</a>)</li>
+</ul>
+</li>
+<li>
+<p><code>Render deferred light</code> - renders a light source that casts a colored light around the particles. As it is only deferred light, no shadows will be casted. (<a href="./Function%20Library.md#render-deferred-light">Library</a>)</p>
+</li>
+<li>
+<p><code>Render projected</code> -  renders a material on other objects like ground, trees etc. Will most likely be invisible in the Particle Editor, to avoid that go to the Controls Panel and clock on the “Browse” button in the center to select a model (it’s often useful to search for “ground” and select a plane model). Note here also that in contrast to all other texture based renderes this renderer requires a material (.vtex &lt;-&gt; .vmat). (<a href="./Function%20Library.md#render-projected">Library</a>)</p>
+</li>
+</ul>
+<p>There are more renderers, but these were the most common ones.</p>
+<h3 id="pre-emission-operator">Pre Emission Operator</h3>
+<p>Under this category are operators, that are evaluated before all other Functions. They often manipulate CPs, manipulate children, etc. You won’t need them for most particle effects, but they can be a great addition and are vital for some complex particle behavior.</p>
+<p>As most of them have pretty specific use cases, only the most common one will be explained right here:</p>
+<ul>
+<li><code>Set single control point position</code> - copies the coordinated of another control point to a new one. The new one can have an offset to the original one, described in <code>control point location</code>. This offset respects the orientation of the original control point and therefor is in local space. If you want to prevent this, check <code>set positions in world space</code>. The new CP will be continously recalculated when the original CP changes. If you want to prevent this, check <code>only set position once</code>. (<a href="./Function%20Library.md#set-single-control-point">Library</a>)</li>
+<li><code>Set control point positions</code> -  basically the same as above, but can do 4 new CPs at once. (<a href="./Function%20Library.md#set-control-point-positions">Library</a>)</li>
+</ul>
+<p>Be aware that  when a control point is set by one of these Pre Emission Operators, they will be grayed out in the Controls Panel and cannot be changed manually anymore.</p>
+<h2 id="what-now">What now?</h2>
+<p>Now you should a basic understanding of the differences of the different Functions. But theres far more to learn that wasn’t covered here.</p>
+<p>Now you could go and explore the Asset Browser, look up different particle effects, try to understand them and experiment as much as you like.</p>
+<p>If you don’t want to figure out stuff by yourself, you can go on straight to the follow up tutorials. These will deepen your knowledge abd go more into detail for specif use cases and effects. So go checkout these links:</p>
 
