@@ -217,4 +217,7 @@ Renderers can now make these abstract particles visible to us. They decide wheth
 <p>Now you should a basic understanding of the differences of the different Functions. But theres far more to learn that wasn’t covered here.</p>
 <p>Now you could go and explore the Asset Browser, look up different particle effects, try to understand them and experiment as much as you like.</p>
 <p>If you don’t want to figure out stuff by yourself, you can go on straight to the follow up tutorials. These will deepen your knowledge abd go more into detail for specif use cases and effects. So go checkout these links:</p>
+<ul>
+<li><a href="./Tutorials.md#guided-tutorial">Guided Tutorials</a></li>
+</ul>
 
