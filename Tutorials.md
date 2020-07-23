@@ -16,7 +16,7 @@
 </ul>
 <h2 id="basic">Basic</h2>
 <ul>
-<li>list</li>
+<li><a href="./Tutorials/Rotation%20Guide.md">Rotations</a></li>
 </ul>
 <h2 id="advanced">Advanced</h2>
 <ul>
