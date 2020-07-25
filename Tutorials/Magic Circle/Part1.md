@@ -16,26 +16,50 @@ Now we want to add the bare minimum of functions we need for this particle to fu
 *Add everything you think might be needed now. If you think you're done, click to see the solution below.*
 
 <details>
-	<summary>Basic Functionality</summary>
+	<summary>**Basic Functionality**</summary>
 
 - Since we want to create an instant effect, we need:
 `Emit instantaneously` with `num to emit` set to 1 (we only want one ring).
 - we want `Position within sphere random` to place our particle at CP0. Leave it at default properties.
 - as always we want to have `Lifespan decay`
 - also we want `Render sprites`.
+- we want to set `max particles` in the Base Properties to 1, since we only need one particle here.
 
 If you added enything else deactivate it for now. You can later active it again, if we reach the corresponding part in this tutorial.
-
 </details>
+
+Now we want our sprite to be better visible. So for now just increase the radius attribute in the Base Properties (*> 100 is recommended*). Next it's time to change the orientation of the sprite. We want it to ne aligned to ground instead of our screen. To do this we change the `orientation type` in Render sprites to `World-Z Align`.
 
 ## Finding the right texture
 
+Now that we can already display a sprite on the ground, we want to change it into a proper magic circle. Since we want this effect to be extraordinary, it's recommended to use a new texture. How you do so is described below. If you don't want to do this for now, read the other option below:
+
 <details>
-  <summary>Creating your own texture</summary>
+  <summary>**Creating your own texture**</summary>
   
-  Spoiler text. Note that it's important to have a space after the summary tag. You should be able to write any markdown you want inside the `<details>` tag... just make sure you close `<details>` afterward.
-  
- ```javascript
- console.log("I'm a code block!");
- ```
+Important your own texture into dota is fairly easy. All you need for that is a source image in the target (*.tga*) file format with transparent or black background and the [Dota2 Modkit](https://github.com/n-gao/LegionTD-Reborn-Modkit).
+You can either use a new texture or use the one provided in the material folder. You can also find a version of the Dota2 Modkit there: [Materials](./materials).
+
+If you are new to the Modkit, here is a very brief introduction: Run the *D2ModKit.exe* after you unzipped the rar folder. Enter your dota path, so the tool can find your addons. Click on the big button on the left to select the addon you're currently working in.
+
+So if you've got everything ready, we start by copying our source image into our content folder. You can quick-open the content folder by clicking in the `C` button in the Modkit. We want to have the new texture to be in the materials folder and save it there. The file should meet following requirements:
+
+- targa file type (*.tga*)
+-  meaningful name without spaces and capital letters (*e.g. "magic_circle_01"*)
+- image resolution of 2^x, so 64x64, 128x128, ..., 2048x2048
+- transparent background (better) OR
+- black background with white accents (black will be invisible)
+
+Once you've copied you file there click on `T2` in the Modkit and then on `.tga -> .vtex_c`. Select your image and confirm. You have succesfully created an own texture! If you enable `Compiled Textures` and `Targa` as Asset Types in your Asset Browser, you should now see these new textures.
+
+Now select this as the texture for Render sprites.
+
 </details>
+<details>
+	<summary>**Use an existing texture**</summery>
+
+Open your Render sprites and change the texture. You use anything you want, but some decent looking ones can be found when searching for "rune".
+
+</details>
+
+
