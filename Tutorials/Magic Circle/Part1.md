@@ -13,14 +13,19 @@ It's good practice to save the effect at the start, so let's save this effect (p
 
 Now we want to add the bare minimum of functions we need for this particle to function. So we need an emitter, some decay and a render sprites.
 
-*Add everything you think might be needed now. If you think you're done, you can see the solution below.*
+*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
 
 <details>
 	<summary>Basic Functionality</summary>
-	Muhahahah!
+
+- Since we want to create an instant effect, we need:
+`Emit instantaneously` with `num to emit` set to 1 (we only want one ring).
+- we want `Position within sphere random` to place our particle at CP0. Leave it at default properties.
+- as always we want to have `Lifespan decay`
+- also we want `Render sprites`.
+If you added enything else deactivate it for now. You can later active it again, if we reach the corresponding part in this tutorial.
+
 </details>
-
-
 
 ## Finding the right texture
 
