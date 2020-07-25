@@ -86,6 +86,7 @@ Let's add some more effects, so the effect looks more interesting! To do so we h
 - add `Alpha fade out simple` and adjust the `fade in time` to your liking
 - add `Radius scale` and set the `radius start scale` to 0. Reduce the `end time` to a lower value like 0.15. Increase the `scale bias` for a nice smooth effect
 - add a spinning effect by adding `Rotation speed random`. Set the offset to something like -45 and disable the random flip direction. Also make sure you've also added `Rotation basic`!
+- adjust the color: open `Color and alpha adjustments` under Render sprites. Increase the `overbright factor` to a slightly higher value like 2. This option increases the the saturation and brightness and makes the particle better visible ingame.
 </details>
 
 ## Make it scaling
