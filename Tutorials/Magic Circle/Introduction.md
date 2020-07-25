@@ -3,7 +3,7 @@
 
 ---
 
-<p>back to the <a href="../Tutorials.md">Tutorials</a>.</p>
+<p>back to the <a href="../../Tutorials.md">Tutorials</a>.</p>
 <h1 id="magic-circle-particle">Magic Circle Particle</h1>
 <p><strong>Difficulty: 4/5</strong></p>
 <p>In this tutorial we’re going to create a ground-particle effect from scratch. It is a purple, spinning and pulsating magic circle that emits some sparks. It can be scaled in radius and duration.</p>
@@ -26,5 +26,5 @@
 All resources needed for this tutorial can be found <a href="./materials">here</a>.</p>
 <h2 id="lets-go">Lets go</h2>
 <p>This tutorial will have multiple parts that focus on different aspects and differnt particles itself. You will see this navigation bar at the bottom of each tutorial:</p>
-<p><a href="./Introduction.md">Introduction</a> - <a href="./Part1.md">Part 1</a> - <a href="./Part2.md">Part 2</a> - <a href="./Part3.md">Part 3</a> - <a href="./Part4.md">Part 4</a> - <a href="./Part5.md">Part 5</a> - <a href="./Part1.md">&gt;&gt; Next &gt;&gt;</a></p>
+<p><a href="#">Introduction</a> - <a href="./Part1.md">Part 1</a> - <a href="./Part2.md">Part 2</a> - <a href="./Part3.md">Part 3</a> - <a href="./Part4.md">Part 4</a> - <a href="./Part5.md">Part 5</a> - <a href="./Part1.md">&gt;&gt; Next &gt;&gt;</a></p>
 
