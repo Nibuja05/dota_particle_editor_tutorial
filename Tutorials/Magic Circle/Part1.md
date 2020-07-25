@@ -13,7 +13,7 @@ It's good practice to save the effect at the start, so let's save this effect (p
 
 Now we want to add the bare minimum of functions we need for this particle to function. So we need an emitter, some decay and a render sprites.
 
-*~ Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Basic Functionality</b></summary>
@@ -66,13 +66,14 @@ Open your Render sprites and change the texture. You use anything you want, but 
 </details>
 
 Now you should have a magic circle particle displayed: 
+
 ![](https://i.imgur.com/VFXS1ob.png)
 
 ## More effects
 
 Let's add some more effects, so the effect looks more interesting! To do so we have a lot of options: We could change the color, fade it in and many more. Try to get close to the gif at the [beginning](./#part-1-creating-the-circle)
 
-*~ Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Advanced Functionality</b></summary>
@@ -95,7 +96,7 @@ In the end we want to have two scaling CPs for this particle effect:
 - CP2: scale radius (x-coordinate)
 - CP0: set position
 
-*~ Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Scaling Functionality</b></summary>
