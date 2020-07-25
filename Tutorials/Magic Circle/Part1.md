@@ -37,7 +37,7 @@ Now that we can already display a sprite on the ground, we want to change it int
 <details>
   <summary><b>Creating your own texture</b></summary>
   
-Important your own texture into dota is fairly easy. All you need for that is a source image in the target (*.tga*) file format with transparent or black background and the [Dota2 Modkit](https://github.com/n-gao/LegionTD-Reborn-Modkit).
+Importing your own texture into dota is fairly easy. All you need for that is a source image in the Targa (*.tga*) file format with transparent or black background and the [Dota2 Modkit](https://github.com/n-gao/LegionTD-Reborn-Modkit).
 You can either use a new texture or use the one provided in the material folder. You can also find a version of the Dota2 Modkit there: [Materials](./materials).
 
 If you are new to the Modkit, here is a very brief introduction: Run the *D2ModKit.exe* after you unzipped the rar folder. Enter your dota path, so the tool can find your addons. Click on the big button on the left to select the addon you're currently working in.
@@ -55,11 +55,16 @@ Once you've copied you file there click on `T2` in the Modkit and then on `.tga 
 Now select this as the texture for Render sprites.
 
 </details>
+
+OR
+
 <details>
 	<summary><b>Use an existing texture</b></summery>
 
 Open your Render sprites and change the texture. You use anything you want, but some decent looking ones can be found when searching for "rune".
 
 </details>
+
+Now you should have a magic circle particle displayed.
 
 
