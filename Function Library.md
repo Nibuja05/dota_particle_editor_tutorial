@@ -3,7 +3,6 @@
 
 ---
 
-<p>save_header</p>
 <p>back to the <a href="README.md">Overview</a>.</p>
 <h1 id="function-library">Function Library</h1>
 <p>A collection of all (the most) functions available and information about them. This data is auto-generated from different sources, so the data provided may not be 100% accurate.</p>
