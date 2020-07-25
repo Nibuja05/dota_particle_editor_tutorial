@@ -71,7 +71,7 @@ Now you should have a magic circle particle displayed:
 
 ## More effects
 
-Let's add some more effects, so the effect looks more interesting! To do so we have a lot of options: We could change the color, fade it in and many more. Try to get close to the gif at the [beginning](./#part-1-creating-the-circle)
+Let's add some more effects, so the effect looks more interesting! To do so we have a lot of options: We could change the color, fade it in and many more. Try to get close to the gif at the [beginning](#part-1-creating-the-circle)
 
 *Add everything you think might be needed now. If you think you're done, click to see the solution below.*
 
@@ -119,3 +119,9 @@ radius scaling:
 - now the radius scaled correctly with the visuals
 
 </details>
+
+## Move on
+
+We're done with the fundamentals. In the next part we're going to create a child effect, that add some sparks and focuses on interesting movement possibilities.
+
+[<< Previous <<](./Introduction.md) - [Introduction](./Introduction.md) - [Part 1](#) - [Part 2](./Part2.md) - [Part 3](./Part3.md) - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part2.md)
