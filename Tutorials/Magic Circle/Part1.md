@@ -23,6 +23,7 @@ Now we want to add the bare minimum of functions we need for this particle to fu
 - we want `Position within sphere random` to place our particle at CP0. Leave it at default properties.
 - as always we want to have `Lifespan decay`
 - also we want `Render sprites`.
+
 If you added enything else deactivate it for now. You can later active it again, if we reach the corresponding part in this tutorial.
 
 </details>
