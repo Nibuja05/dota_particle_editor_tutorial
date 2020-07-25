@@ -16,7 +16,7 @@ Now we want to add the bare minimum of functions we need for this particle to fu
 *Add everything you think might be needed now. If you think you're done, click to see the solution below.*
 
 <details>
-	<summary>**Basic Functionality**</summary>
+	<summary><b>Basic Functionality</b></summary>
 
 - Since we want to create an instant effect, we need:
 `Emit instantaneously` with `num to emit` set to 1 (we only want one ring).
@@ -35,7 +35,7 @@ Now we want our sprite to be better visible. So for now just increase the radius
 Now that we can already display a sprite on the ground, we want to change it into a proper magic circle. Since we want this effect to be extraordinary, it's recommended to use a new texture. How you do so is described below. If you don't want to do this for now, read the other option below:
 
 <details>
-  <summary>**Creating your own texture**</summary>
+  <summary><b>Creating your own texture</b></summary>
   
 Important your own texture into dota is fairly easy. All you need for that is a source image in the target (*.tga*) file format with transparent or black background and the [Dota2 Modkit](https://github.com/n-gao/LegionTD-Reborn-Modkit).
 You can either use a new texture or use the one provided in the material folder. You can also find a version of the Dota2 Modkit there: [Materials](./materials).
@@ -56,7 +56,7 @@ Now select this as the texture for Render sprites.
 
 </details>
 <details>
-	<summary>**Use an existing texture**</summery>
+	<summary><b>Use an existing texture</b></summery>
 
 Open your Render sprites and change the texture. You use anything you want, but some decent looking ones can be found when searching for "rune".
 
