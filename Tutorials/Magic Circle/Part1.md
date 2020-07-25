@@ -59,23 +59,10 @@ Now select this as the texture for Render sprites.
 OR
 
 <details>
-	<summary><b>Use an existing texture</b></summery>
+	<summary><b>Use an existing texture</b></summary>
 
 Open your Render sprites and change the texture. You use anything you want, but some decent looking ones can be found when searching for "rune".
 
-</details>
-
-<details>
-	<summary><b>Basic Functionality</b></summary>
-
-- Since we want to create an instant effect, we need:
-`Emit instantaneously` with `num to emit` set to 1 (we only want one ring).
-- we want `Position within sphere random` to place our particle at CP0. Leave it at default properties.
-- as always we want to have `Lifespan decay`
-- also we want `Render sprites`.
-- we want to set `max particles` in the Base Properties to 1, since we only need one particle here.
-
-If you added enything else deactivate it for now. You can later active it again, if we reach the corresponding part in this tutorial.
 </details>
 
 Now you should have a magic circle particle displayed.
