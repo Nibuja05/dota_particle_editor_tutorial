@@ -8,7 +8,7 @@ In this first part we're going to create the base effect: a spinning magic circl
 
 ## The basics
 
-First of all let's create a new particle effect. We won't use any other resource, so we start with completly fresh and empty Particle Editor. To so open the Editor and press *Ctrl + N* to create a new particle effect.
+First of all let's create a new particle effect. We won't use any other resource, so we start with completly fresh and empty Particle Editor. To do so, open the Editor and press *Ctrl + N* to create a new particle effect.
 It's good practice to save the effect at the start, so let's save this effect (pressing *Ctrl + Shift + S*) right away. It is also recommended to create a new folder for this effect and all its children. So we create a folder named `magic_circle` and save this file there with the name `magic_circle.vpcf`.
 
 Now we want to add the bare minimum of functions we need for this particle to function. So we need an emitter, some decay and a render sprites.
@@ -28,7 +28,7 @@ Now we want to add the bare minimum of functions we need for this particle to fu
 If you added enything else deactivate it for now. You can later active it again, if we reach the corresponding part in this tutorial.
 </details>
 
-Now we want our sprite to be better visible. So for now just increase the radius attribute in the Base Properties (*> 100 is recommended*). Next it's time to change the orientation of the sprite. We want it to ne aligned to ground instead of our screen. To do this we change the `orientation type` in Render sprites to `World-Z Align`.
+Now we want our sprite to be better visible. So for now just increase the radius attribute in the Base Properties (*> 100 is recommended*). Next it's time to change the orientation of the sprite. We want it to be aligned to ground instead of our screen. To do this we change the `orientation type` in Render sprites to `World-Z Align`.
 
 ## Finding the right texture
 
@@ -84,9 +84,9 @@ Let's add some more effects, so the effect looks more interesting! To do so we h
 	- use strong intense colors to make it clearly visible ingame
 - add `Alpha fade in simple` and adjust the `fade in time` to your liking
 - add `Alpha fade out simple` and adjust the `fade in time` to your liking
-- add `Radius scale` and set the `radius start scale` to 0. Reduce the `end time` to a lower value like 0.15. Increase the `scale bias` for a nice smooth effect
-- add a spinning effect by adding `Rotation speed random`. Set the offset to something like -45 and disable the random flip direction. Also make sure you've also added `Rotation basic`!
-- adjust the color: open `Color and alpha adjustments` under Render sprites. Increase the `overbright factor` to a slightly higher value like 2. This option increases the the saturation and brightness and makes the particle better visible ingame.
+- add `Radius scale` and set the `radius start scale` to 0. Reduce the `end time` to a lower value like **0.15**. Increase the `scale bias` for a nice smooth effect
+- add a spinning effect by adding `Rotation speed random`. Set the offset to something like **-45** and disable the random flip direction. Also make sure you've also added `Rotation basic`!
+- adjust the color: open `Color and alpha adjustments` under Render sprites. Increase the `overbright factor` to a slightly higher value like **2**. This option increases the the saturation and brightness and makes the particle better visible ingame.
 </details>
 
 ## Make it scaling
@@ -105,16 +105,16 @@ In the end we want to have two scaling CPs for this particle effect:
 duration scaling:
 
 - add `Remap control point to scalar` 
-- set the CP number to 1
+- set the CP number to **1**
 - set the output field to `Life Duration`
-- adjust input/output maximum to a higher number like 30 (*or whatever you want to be the maximum duration*)
+- adjust input/output maximum to a higher number like **30** (*or whatever you want to be the maximum duration*)
 
 radius scaling:
 
 - add `Remap control point to scalar` 
-- set the CP number to 2
-- set the input/output maximum to a high number like 5000
-- enable `Visualize` and `Show control points` and set the x-coordinate of CP2 to something like 2000
+- set the CP number to **2**
+- set the input/output maximum to a high number like **5000**
+- enable `Visualize` and `Show control points` and set the x-coordinate of CP2 to something like **2000**
 - check if the CP2 marker is directly on the outer edge of the ring
 - if not adjust the output maximum, until it matches
 - now the radius scaled correctly with the visuals
@@ -123,6 +123,6 @@ radius scaling:
 
 ## Move on
 
-We're done with the fundamentals. In the next part we're going to create a child effect, that add some sparks and focuses on interesting movement possibilities.
+We're done with the fundamentals. In the next part we're going to create a child effect, that adds some sparks and focuses on interesting movement possibilities.
 
 [<< Previous <<](./Introduction.md) - [Introduction](./Introduction.md) - [Part 1](#) - [Part 2](./Part2.md) - [Part 3](./Part3.md) - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part2.md)
