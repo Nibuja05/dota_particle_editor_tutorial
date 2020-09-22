@@ -125,4 +125,4 @@ The second child is done and only one left to go. When you wish, you could add t
 
 The next effect is a pulsating magic circle, so go check it out!
 
-[<< Previous <<](./Part2.md) - [Introduction](./Introduction.md) - [Part 1](./Part1.md) - [Part 2](./Part2.md) - [Part 3](#) - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part4.md)
+[<< Previous <<](./Part2.md) - [Introduction](./Introduction.md) - [Part 1](./Part1.md) - [Part 2](./Part2.md) - <b>[Part 3](#)</b> - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part4.md)
