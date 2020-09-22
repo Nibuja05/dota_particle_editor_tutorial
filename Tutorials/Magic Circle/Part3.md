@@ -1,6 +1,6 @@
 back to the [Tutorials](../../Tutorials.md).
 
-# Part 3: Outer Ring
+# Part 3: Counteracting Ring
 
 In this part we're going to create an outer ring, that is rotating counterclockwise:
 
