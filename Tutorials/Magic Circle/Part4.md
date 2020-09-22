@@ -40,4 +40,4 @@ With this we have successfully combined our behaviours.
 
 Another effect is finished and the end is near. You can also add this effect to the parent now. In the last part, we're going to coordinate some things, so the effect functions as a whole and not just as a collection of some effects.
 
-[<< Previous <<](./Part3.md) - [Introduction](./Introduction.md) - [Part 1](./Part1.md) - [Part 2](./Part2.md) - [Part 3](./Part3.md) - [Part 4](#) - [Part 5](./Part5.md) - [>> Next >>](./Part5.md)
+[<< Previous <<](./Part3.md) - [Introduction](./Introduction.md) - [Part 1](./Part1.md) - [Part 2](./Part2.md) - [Part 3](./Part3.md) - <b>[Part 4](#)</b> - [Part 5](./Part5.md) - [>> Next >>](./Part5.md)
