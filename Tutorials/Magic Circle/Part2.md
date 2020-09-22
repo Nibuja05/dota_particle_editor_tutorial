@@ -69,6 +69,7 @@ To address this new issue, we just need to increase the `overbright factor` in t
 *Note: Whenever you feel like your effect is barely visible ingame, try adjusting this value.*
 
 The result should now look like this:
+
 ![](https://i.imgur.com/hixB3aJ.png)
 
 ## Movement
