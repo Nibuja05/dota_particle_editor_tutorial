@@ -1,6 +1,6 @@
 back to the [Tutorials](../../Tutorials.md).
 
-# Part 2: Sparkly addition
+# Part 2: Sparkly Addition
 
 In this part we're going to create sparks that emerge from the ground and circle in the same direction as our main circle particle. The final result should look like this:
 
