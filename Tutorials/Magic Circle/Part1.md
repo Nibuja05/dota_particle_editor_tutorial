@@ -1,6 +1,6 @@
 back to the [Tutorials](../../Tutorials.md).
 
-# Part 1: Creating the circle
+# Part 1: Circling Powers
 
 In this first part we're going to create the base effect: a spinning magic circle on the ground:
 
