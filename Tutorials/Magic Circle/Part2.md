@@ -11,6 +11,7 @@ In this part we're going to create sparks that emerge from the ground and circle
 As always we need to start with a fresh new particle. So open the Editor and press *Ctrl + N* to create a new particle effect and save it in the same directory as the circle as `magic_circle_sparks.vpcf`. It is common practice to keep the parent name and add the new addition, in this case *_sparks* at the end. This will ensure to make the hierachy also visible with the particle naming.
 
 So to start, lets do some basic sprites that continiously spawn on the ground:
+
 ![](https://i.imgur.com/5MdkvaM.gif)
 
 *Add everything you think might be needed now. If you think you're done, click to see the solution below.*
