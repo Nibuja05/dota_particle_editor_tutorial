@@ -117,4 +117,4 @@ Now we've successfully setup our particle effect. There's only one thing left to
 
 We finished our first child particle effect, so if you want you can also add it to it's parent now. Next we're going to make the next child, which is a spinning outer ring.
 
-[<< Previous <<](./Part1.md) - [Introduction](./Introduction.md) - [Part 1](./Part1.md) - [Part 2](#) - [Part 3](./Part3.md) - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part3.md)
+[<< Previous <<](./Part1.md) - [Introduction](./Introduction.md) - [Part 1](./Part1.md) - <b>[Part 2](#)</b> - [Part 3](./Part3.md) - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part3.md)
