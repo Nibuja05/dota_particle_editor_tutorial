@@ -125,4 +125,4 @@ radius scaling:
 
 We're done with the fundamentals. In the next part we're going to create a child effect, that adds some sparks and focuses on interesting movement possibilities.
 
-[<< Previous <<](./Introduction.md) - [Introduction](./Introduction.md) - [Part 1](#) - [Part 2](./Part2.md) - [Part 3](./Part3.md) - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part2.md)
+[<< Previous <<](./Introduction.md) - [Introduction](./Introduction.md) - <b>[Part 1](#)</b> - [Part 2](./Part2.md) - [Part 3](./Part3.md) - [Part 4](./Part4.md) - [Part 5](./Part5.md) - [>> Next >>](./Part2.md)
