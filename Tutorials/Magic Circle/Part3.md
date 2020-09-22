@@ -21,21 +21,21 @@ Try to recreate that effect. That is not that easy, so in case you might need he
 <details>
 	<summary><i>Tip 1</i></summary>
 
- - a "Rope" might something that is close to what we need.
+a "Rope" might something that is close to what we need.
 
 </details>
 
 <details>
 	<summary><i>Tip 2</i></summary>
 
- - the effect is emitted as a ring, we should look for something that does that.
+the effect is emitted as a ring, we should look for something that does that.
 
 </details>
 
 <details>
 	<summary><i>Tip 3</i></summary>
 
- - all particles seem to be "evenly spread" across the ring.
+all particles seem to be "evenly spread" across the ring.
 
 </details>
 
