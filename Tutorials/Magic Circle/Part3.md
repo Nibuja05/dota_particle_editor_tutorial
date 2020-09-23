@@ -76,7 +76,7 @@ Now it's time to set the shape of our ring. Until now we only have a basic ring,
 
 Add a new Initializer called `Init Float`. This will simply set a particle property like the radius for each particle. First we want to set its value method to `Scale Initial Value`. This way, we can change the radius, while also keeping our intial value (of **25**).
 
-We're going to use the `#` button again. Choose `Per-Particle Number Percent of Total Count (0-1)`. As the (long!) name impliesm, this value is different for each particle and returns a percentage value of its index. If you use the preview *Visualize* function (button at the top) and check `Show Particle Indices`, you can see, that the higher the particle index is, the greater the radius.
+We're going to use the `#` button again. Choose `Per-Particle Number Percent of Total Count (0-1)`. As the (long!) name implies, this value is different for each particle and returns a percentage value of its index. If you use the preview *Visualize* function (button at the top) and check `Show Particle Indices`, you can see, that the higher the particle index is, the greater the radius.
 
 Close the *Visualizer* and change the mode from `Direct Value Copy` to `Curve`. With this function we can set a graph that maps our input values to output values. We can also define the value ranges we want to cover. For now let's set the maximum of `Output Range` to **2**.
 
