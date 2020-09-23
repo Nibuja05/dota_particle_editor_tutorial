@@ -29,7 +29,7 @@ Now we've successfully made the fade in and out effect absolute and independent 
 
 Let's start with `magic_circle_pulse.vpcf`, since its a lot like our parent particle effect.
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Pulse Adjustments</b></summary>
