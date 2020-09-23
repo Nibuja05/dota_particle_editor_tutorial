@@ -13,7 +13,7 @@ It's good practice to save the effect at the start, so let's save this effect (p
 
 Now we want to add the bare minimum of functions we need for this particle to function. So we need an emitter, some decay and a render sprites.
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Basic Functionality</b></summary>
@@ -25,7 +25,7 @@ Now we want to add the bare minimum of functions we need for this particle to fu
 - also we want `Render sprites`.
 - we want to set `max particles` in the Base Properties to 1, since we only need one particle here.
 
-If you added enything else deactivate it for now. You can later active it again, if we reach the corresponding part in this tutorial.
+If you added anything else deactivate it for now. You can later active it again, if we reach the corresponding part in this tutorial.
 </details>
 
 Now we want our sprite to be better visible. So for now just increase the radius attribute in the Base Properties (*> 100 is recommended*). Next it's time to change the orientation of the sprite. We want it to be aligned to ground instead of our screen. To do this we change the `orientation type` in Render sprites to `World-Z Align`.
@@ -73,7 +73,7 @@ Now you should have a magic circle particle displayed:
 
 Let's add some more effects, so the effect looks more interesting! To do so we have a lot of options: We could change the color, fade it in and many more. Try to get close to the gif at the [beginning](#part-1-creating-the-circle)
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Advanced Functionality</b></summary>
@@ -97,7 +97,7 @@ In the end we want to have two scaling CPs for this particle effect:
 - CP2: scale radius (x-coordinate)
 - CP0: set position
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Scaling Functionality</b></summary>
