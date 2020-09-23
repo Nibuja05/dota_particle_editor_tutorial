@@ -19,3 +19,5 @@ If you want to use it yourself, all you need is python installed. Run `build_dat
 ## Important note
 This is a work that is constantly being expanded with new content. So if important information is missing, you are welcome to contribute!
 
+Also big thanks to **Shush**, for his ideas and proofreading.
+
