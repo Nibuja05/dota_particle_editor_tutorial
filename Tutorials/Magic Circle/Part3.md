@@ -16,7 +16,7 @@ As a starting point we want to create this effect:
 
 Try to recreate that effect. That is not that easy, so in case you might need help, but don't want to see the solution, there are also some tips for you.
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><i>Tip 1</i></summary>
@@ -55,7 +55,7 @@ Don't forget to check `even distribution` in `Postion along ring` or else everyt
 
 Next we add the usual, like a fade in effect and a color. Also we should increase the radius.
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Basic Functionality</b></summary>
@@ -86,7 +86,7 @@ Now let's add another point to the graph. To do so hover over a position, hold *
 
 Now we add a second `Init Float` and want to achive something similiar for the `alpha` value.
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Alpha Curve</b></summary>
