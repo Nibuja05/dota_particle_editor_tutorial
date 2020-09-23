@@ -14,7 +14,7 @@ So to start, lets do some basic sprites that continiously spawn on the ground:
 
 ![](https://i.imgur.com/5MdkvaM.gif)
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Basic Functionality</b></summary>
@@ -28,7 +28,7 @@ So to start, lets do some basic sprites that continiously spawn on the ground:
 
 Now that we have the bare minimum we can think of improving the effect. If you think of the circle effect, you can already imagine that we want some kind of fades for a smoother creation and end of the particles.
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Start/End</b></summary>
@@ -76,7 +76,7 @@ The result should now look like this:
 
 Now that we have a nice static effect, we should add some movement as well. Try to add a "rising" effect and make the particles spin around the center.
 
-*Add everything you think might be needed now. If you think you're done, click to see the solution below.*
+*Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
 	<summary><b>Basic Movements</b></summary>
@@ -91,7 +91,7 @@ Now that we have the basic movement done, we still have some options to make the
 
 ### ~ Velocities ~
 
-Each particle can have a velocity, which describes a speed the particle is moving in a certain direction. Opposing velocities can cancel each other or can add each other of the are facing in the same direction. Since a particle tries to maintain it's velocity all the time, they are nearly always applied as `Initializer`.
+Each particle can have a velocity, which describes a speed the particle is moving in a certain direction. Opposing velocities can cancel each other or can add each other of they are facing in the same direction. Since a particle tries to maintain it's velocity all the time, they are nearly always applied as `Initializer`.
 
 Some effects like `Movement rotate particle around axis` don't effect the velocity at all and just change the particles location additionally. Also note that all *speed* attributes of positional Initializers like in `Position within sphere random` are velocities as well.
 
