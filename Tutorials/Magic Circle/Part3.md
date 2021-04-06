@@ -103,7 +103,7 @@ It's also a good idea to adjust the curve a little further like here:
 
 ## Finishing touch
 
-At the end we only have some little things to do. First let's not forget to set the max particle count to **100**. Also we should add `Normal lock to control point` like before, so the particles will follow the start CP.
+At the end we only have some little things to do. First let's not forget to set the max particle count to **100**. Also we should add `Movement lock to control point` like before, so the particles will follow the start CP.
 
 We should also not forget to adjust the radius dynamically to CP2. This is done the same way as in the previous effect, we just need to set it for the initial radius value in `Position along ring` here.
 
