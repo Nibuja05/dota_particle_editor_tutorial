@@ -11,6 +11,7 @@
 <ul>
 <li><a href="./Tutorials/Basic%20Knowledge.md">Basic Knowledge</a></li>
 <li><a href="./Tutorials/Rotation%20Guide.md">Rotations</a></li>
+<li><a href="./Tutorials/Particle%20Destruction.md">Particle Destruction</a></li>
 </ul>
 <h2 id="advanced">Advanced</h2>
 <p>Advanced tutorials that try to solve very specific problems.</p>
