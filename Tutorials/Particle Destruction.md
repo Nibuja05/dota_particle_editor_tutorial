@@ -1,6 +1,6 @@
 <p>back to the <a href="../Tutorials.md">Tutorials</a>.</p>
 <h1 id="particle-destruction">Particle Destruction</h1>
-<p>If you ever worked with particles before, you probably saw “<em>Endcap</em>” or “<em>Decay</em>” somewhere before. But what is that and what does it do?<br>
+<p>If you ever worked with particles before, you probably saw “<em>Endcap</em>” or “<em>Decay</em>” somewhere before. But what is that and what does it do? How to properly manage particle counts and keep the system high performance?<br>
 In this tutorial I want to answer most questions about <strong>Particle Death</strong> and why its very important to keep track of.</p>
 <h2 id="particle-count">Particle Count</h2>
 <p>Whener you create a new particle, it needs resources and uses those until it is destroyed. So to keep the performance of you particle as high as possible, its very important to keep track of how many particles you create and maintain.<br>
