@@ -51,7 +51,8 @@ You can also remove assets from the currently selected workset from the right cl
 <em>Note: It’s not possible to add assets to an existing working set, so only use with care!</em>*</li>
 <li>Another very useful feature is <strong>Visualize References</strong> (right click context menu). This will show you a graph of all assets connected to the selected one.<br>
 <img src="https://i.imgur.com/nAvFP28.png" alt=""><br>
-This is especially useful if you don’t want to open the asset and still check what it depends on, or to view all usages of models/materials what would be impossible otherwise. On the right below the preview are even more options:<img src="https://i.imgur.com/FGh9B1X.png" alt=""></li>
+This is especially useful if you don’t want to open the asset and still check what it depends on, or to view all usages of models/materials what would be impossible otherwise. On the right below the preview are even more options:<br>
+<img src="https://i.imgur.com/FGh9B1X.png" alt=""></li>
 <li>An often overlooked but useful feature is also <strong>Set Name Filter</strong> that can be activated from the right click context menu. It will replace your current search string with a new search query, that shows similar assets. It works quite well for valve particles and will also work great for custom particles, if they are named accordingly.</li>
 </ul>
 <h2 id="particle-editor">Particle Editor</h2>
