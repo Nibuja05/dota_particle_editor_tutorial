@@ -46,7 +46,8 @@
 If you click on the <strong>New</strong> Button here, it will save your  last search you did. This includes: <em>Mods</em>, <em>Asset Types</em>, <em>Search String</em> etc.<br>
 This is a very useful feature that can save a lot of time and is saved across multiple sessions.<br>
 *<em>Note: These saves will create a file named <code>AssetBrowserSavedSearches.kv3</code>, that can be shared and modified too</em>.</li>
-<li>You can also use advanced search strings. There is a convenient help button by default: <img src="https://i.imgur.com/8yokcoN.png" alt="">- You can also create <strong>Working Sets</strong>. To do so, select multiple assets at once (<em>Shift</em>/<em>Ctrl</em> + click) and then use right click and select <em>Create New Working Set</em> to store the selected assets in a working set. It will then be shown in the top bar: <img src="https://i.imgur.com/MiAR3md.png" alt="enter image description here"><br>
+<li>You can also use advanced search strings. There is a convenient help button by default: <img src="https://i.imgur.com/8yokcoN.png" alt=""></li>
+<li>You can also create <strong>Working Sets</strong>. To do so, select multiple assets at once (<em>Shift</em>/<em>Ctrl</em> + click) and then use right click and select <em>Create New Working Set</em> to store the selected assets in a working set. It will then be shown in the top bar: <img src="https://i.imgur.com/MiAR3md.png" alt="enter image description here"><br>
 You can also remove assets from the currently selected workset from the right click context menu.<br>
 <em>Note: It’s not possible to add assets to an existing working set, so only use with care!</em>*</li>
 <li>Another very useful feature is <strong>Visualize References</strong> (right click context menu). This will show you a graph of all assets connected to the selected one.<br>
