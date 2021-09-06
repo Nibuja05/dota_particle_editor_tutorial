@@ -76,7 +76,7 @@ Let's add some more effects, so the effect looks more interesting! To do so we h
 *Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
-	<summary><b>Advanced Functionality</b></summary>
+	<summary><u><b>Advanced Functionality</u></b></summary>
 
 - add a coloring:
 	- either change the color under Base Properties
@@ -100,16 +100,41 @@ In the end we want to have two scaling CPs for this particle effect:
 *Add everything you think might be needed now. When you think you're done, click to see the solution below.*
 
 <details>
-	<summary><b>Scaling Functionality</b></summary>
+	<summary><b><u>Scaling Functionality</u></b></summary>
 
-duration scaling:
+**This is how it should be done:**
+
+Duration scaling:
+
+- add `Init Float`
+- click on the `#` icon to select the input option
+- select `CP Component`
+- set the value to **1 .X**
+- set the output field to `Life Duration`
+
+Radius scaling:
+
+- add `Init Float`
+- click on the `#` icon to select the input option
+- select `CP Component`
+- set the value to **2 .X**
+- enable `Visualize` and `Show control points` and set the x-coordinate of CP2 to something like **2000**
+- check if the CP2 marker is directly on the outer edge of the ring
+- if not you can adjust the value input:
+	- click on the `=` icon
+	- select `Multiply`
+	- adjust`Multiply By:`, so that you visual radius matches the CP
+
+**This is how it used to be done:**
+
+Duration scaling:
 
 - add `Remap control point to scalar` 
 - set the CP number to **1**
 - set the output field to `Life Duration`
 - adjust input/output maximum to a higher number like **30** (*or whatever you want to be the maximum duration*)
 
-radius scaling:
+Radius scaling:
 
 - add `Remap control point to scalar` 
 - set the CP number to **2**
