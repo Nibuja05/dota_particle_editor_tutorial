@@ -16,6 +16,7 @@
 <h2 id="advanced">Advanced</h2>
 <p>Advanced tutorials that try to solve very specific problems.</p>
 <ul>
+<li><a href="./Tutorials/Projectile%20Conversion.md">Linear Projectiles &lt;-&gt; Tracking Projectiles</a></li>
 <li><a href="./Tutorials/Linear%20Projectiles.md">Linear Projectile Offset</a></li>
 <li><a href="./Tutorials/Sprite%20Trails.md">Static Sprite Trails</a></li>
 </ul>
