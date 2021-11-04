@@ -60,6 +60,6 @@ Respectively tracking projectiles use <strong>CP1</strong> as target point and <
 Now you can copy the <code>Base Properties</code> to your new linear projectile like you did with all other operators.</p>
 <p>You now completly replicated your tracking particle as a linear one. Well done!</p>
 <h1 id="linear-projectile---tracking-projectile">Linear Projectile -&gt; Tracking Projectile</h1>
-<p>The same as <a href="#linear">Tracking Projectile -&gt; Linear Projectile</a>, but reversed.</p>
+<p>The same as <a href="#tracking-projectile---linear-projectile">Tracking Projectile -&gt; Linear Projectile</a>, but reversed.</p>
 <p><em>Detailed Tutorial coming soon</em>…</p>
 
