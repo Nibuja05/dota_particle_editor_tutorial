@@ -1,18 +1,18 @@
 <p>back to the <a href="../Tutorials.md">Tutorials</a>.</p>
 <h1 id="introduction">Introduction</h1>
-<p>Converting linear and tracking projectiles are Problems encountered quite frequently, that often lead to big frustration. This tutorial will guide you throught that process.</p>
+<p>Converting linear and tracking projectiles are problems encountered quite frequently.<br>
+This tutorial will guide you through that process.</p>
 <h2 id="foreword-projectiles">Foreword: Projectiles</h2>
 <p>Linear and tracking projectiles are not that different in their structure and have many similarities:</p>
 <ul>
 <li><strong>CP0</strong>: start point of the projectile</li>
 <li><strong>CP3</strong>: current position of the projectile (used for child effects)</li>
 </ul>
-<p>Additionally linear projectiles use <strong>CP1</strong> as teh velocity.<br>
+<p>Additionally linear projectiles use <strong>CP1</strong> for the velocity.<br>
 Respectively tracking projectiles use <strong>CP1</strong> as target point and <strong>CP2.x</strong> as maximum speed.</p>
 <p>Since the children are often the main part of projectile particles, we can resuse most of it without any changes needed.</p>
 <h1 id="tracking-projectile---linear-projectile">Tracking Projectile -&gt; Linear Projectile</h1>
-<h2 id="quick-way">Quick way</h2>
-<p><em>“Quick, but some things may be missing.”</em></p>
+<h2 id="quick-start">Quick start</h2>
 <p>Open your tracking projectile particle in the Particle Editor. Now select all its children (by pressing <em>Ctrl</em>) and then copy them (by pressing <em>Ctrl + C</em>).</p>
 <p>Now go back to the asset browser and search for <code>particles/dev/library/base_linear_projectile_model.vpcf</code>. Open this particle in the Particle Editor. Now paste in all the children (by pressing <em>Ctrl + V</em>). You should also disable the <code>Render models</code> renderer, by clicking on the checkmark icon on its left.</p>
 <p>Save this particle under your name (by pressing <em>Ctrl + Shift + S</em>). You can now use this as a fully functional linear projectile.</p>
