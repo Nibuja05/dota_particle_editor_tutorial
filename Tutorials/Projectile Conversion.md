@@ -13,13 +13,31 @@ Respectively tracking projectiles use <strong>CP1</strong> as target point and <
 <p>Since the children are often the main part of projectile particles, we can resuse most of it without any changes needed.</p>
 <h1 id="tracking-projectile---linear-projectile">Tracking Projectile -&gt; Linear Projectile</h1>
 <h2 id="quick-start">Quick start</h2>
-<p>Open your tracking projectile particle in the Particle Editor. Now select all its children (by pressing <em>Ctrl</em>) and then copy them (by pressing <em>Ctrl + C</em>).</p>
-<p>Now go back to the asset browser and search for <code>particles/dev/library/base_linear_projectile_model.vpcf</code>. Open this particle in the Particle Editor. Now paste in all the children (by pressing <em>Ctrl + V</em>). You should also disable the <code>Render models</code> renderer, by clicking on the checkmark icon on its left.</p>
+<ul>
+<li>
+<p>Open your tracking projectile particle in the Particle Editor.</p>
+</li>
+<li>
+<p>Now select all its children (by pressing <em>Ctrl</em>) and then copy them (by pressing <em>Ctrl + C</em>).</p>
+</li>
+<li>
+<p>Now go back to the asset browser and search for <code>particles/dev/library/base_linear_projectile_model.vpcf</code>.</p>
+</li>
+<li>
+<p>Open this particle in the Particle Editor.</p>
+</li>
+<li>
+<p>Now paste in all the children (by pressing <em>Ctrl + V</em>).</p>
+</li>
+<li>
+<p>You should also disable the <code>Render models</code> renderer, by clicking on the checkmark icon on its left.</p>
+</li>
+</ul>
 <p>Save this particle under your name (by pressing <em>Ctrl + Shift + S</em>). You can now use this as a fully functional linear projectile.</p>
 <h2 id="further-improvements">Further improvements</h2>
 <p>While we copied all the child effects, the projectile particle itself might have also had an effect. Go back to your original tracking projectile and check if there are any active Renderers (checkmark active).</p>
 <p>If there aren’t any active Renderer, you are done!</p>
-<p>If there are, we probably also want to copy them. TO do so, follow these steps:</p>
+<p>If there are, we probably also want to copy them. To do so, follow these steps:</p>
 <h3 id="prepare-the-linear-projectile">Prepare the linear projectile</h3>
 <ul>
 <li>Go to your new linear projectile.</li>
